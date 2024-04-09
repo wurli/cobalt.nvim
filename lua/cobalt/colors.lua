@@ -139,10 +139,10 @@ local M = {}
 function M.setup(opts)
     opts = opts or {}
     local override_colors = opts.colors or require("cobalt").config.colors
-    local theme = opts.theme or require("cobalt")._CURRENT_THEME -- WARN: this fails if called before kanagawa.load()
+    local theme = opts.theme or require("cobalt")._CURRENT_THEME -- WARN: this fails if called before cobalt.load()
 
     if not theme then
-        error("cobalt.colors.setup(): Unable to infer `theme`. Either specify a theme or call this function after ':colorscheme kanagawa'")
+        error("cobalt.colors.setup(): Unable to infer `theme`. Either specify a theme or call this function after ':colorscheme cobalt'")
     end
 
     -- Add to and/or override palette_colors
