@@ -1,18 +1,6 @@
 <p align="center">
-  <h2 align="center">🌊 KANAGAWA.nvim 🌊</h2>
+  <h2 align="center">🌊 cobalt.nvim 🌊</h2>
 </p>
-
-<p align="center">
-  <img src="cobalt@2x.png" width="500" >
-</p>
-
-<p align="center">NeoVim dark colorscheme inspired by the colors of the famous painting by Katsushika Hokusai.</p>
-
-<p align="center">
-  <h2 align="center"><img alt="Preview" src="https://user-images.githubusercontent.com/36300441/222913073-22b95f11-8c08-4b2b-867c-19072c921de1.png" width=1000></h2>
-</p>
-
-[![W3C](https://img.shields.io/badge/WCAG_2.1_|_AA-756891?logo=w3c&logoColor=fff&style=for-the-badge)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
 
 ## Features
 
@@ -366,11 +354,13 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 - [Xresources](extras/.Xresources)
 - [tmTheme (bat, delta and lazygit)](extras/cobalt.tmTheme)
 - [JSON compatible with many terminals](extras/Cobalt.json) Check [Gogh](https://github.com/Gogh-Co/Gogh#-terminals) for the list of supported terminals.
-- 🎉 Bonus! You win a tiny [python script](palette.py)🐍 to extract color palettes 🎨 from any image! 🥳
 
 ## Acknowledgements
 
-- [Cobalt](https://github.com/rebelot/cobalt.nvim)
+The implementation of this plugin is based on the [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
+theme by [Tommaso Laurenzi](https://github.com/rebelot).
+
+- [Kanagawa](https://github.com/rebelot/kanagawa.nvim)
 - [Tokyonight](https://github.com/folke/tokyonight.nvim)
 - [Gruvbox](https://github.com/morhetz/gruvbox)
 - [Catppuccin](https://github.com/catppuccin/nvim)

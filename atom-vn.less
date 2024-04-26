@@ -1,0 +1,240 @@
+/* https://github.com/j15e/cobalt /*
+
+:host, atom-text-editor {
+  &, .gutter {
+    background-color: #002240;
+    color: #FFFFFF;
+  }
+
+  &.is-focused .cursor {
+    border-color: #FFFFFF;
+  }
+
+  &.is-focused .selection .region {
+    background-color: rgba(179, 101, 57, 0.75);
+  }
+
+  &.is-focused .line-number.cursor-line-no-selection,
+  &.is-focused .line.cursor-line {
+    background-color: rgba(0, 0, 0, 0.35);
+  }
+
+  .indent-guide {
+    color: rgba(255, 255, 255, 0.15);
+  }
+
+  .invisible-character {
+    color: rgba(255, 255, 255, 0.15);
+  }
+
+  .punctuation:not(.punctuation.definition.string,.punctuation.definition.comment) {
+    color: #E1EFFF;
+  }
+
+  .constant {
+    color: #FF628C;
+  }
+
+  .entity {
+    color: #FFDD00;
+  }
+
+  .keyword {
+    color: #FF9D00;
+  }
+
+  .storage {
+    color: #FFEE80;
+  }
+
+  .string {
+    color: #3AD900;
+  }
+
+  .comment {
+    font-style: italic;
+    color: #0088FF;
+  }
+
+  .support {
+    color: #80FFBB;
+  }
+
+  .variable {
+    color: #CCCCCC;
+
+    &.language {
+      color: #FF80E1;
+    }
+  }
+
+  .meta.function-call {
+    color: #FFEE80;
+  }
+
+  .invalid {
+    color: #F8F8F8;
+    background-color: #800F00;
+  }
+
+  .text .source,
+  .string.unquoted.heredoc,
+  .source .source {
+    color: #FFFFFF;
+    background-color: #223545;
+  }
+
+  .entity.other.inherited-class {
+    font-style: italic;
+    color: #80FCFF;
+  }
+
+  .string {
+    &.quoted .source {
+      color: #9EFF80;
+    }
+
+    .constant {
+      color: #80FF82;
+    }
+
+    &.regexp {
+      color: #80FFC2;
+    }
+
+    .variable {
+      color: #EDEF7D;
+    }
+  }
+
+  .support {
+    &.function {
+      color: #FFB054;
+    }
+
+    &.constant {
+      color: #EB939A;
+    }
+
+    &.type.exception {
+      color: #FF1E00;
+    }
+
+    &.type.property-name.css {
+      color: #9DF39F;
+    }
+  }
+
+  .meta {
+    &.preprocessor.c {
+      color: #8996A8;
+    }
+
+    &.preprocessor.c .keyword {
+      color: #AFC4DB;
+    }
+
+    &.sgml.html &.doctype,
+    &.sgml.html &.doctype .entity,
+    &.sgml.html &.doctype .string,
+    &.xml-processing,
+    &.xml-processing .entity,
+    &.xml-processing .string {
+      color: #73817D;
+    }
+
+    &.tag, &.tag .entity {
+      color: #9EFFFF;
+    }
+
+    &.selector.css .entity.name.tag {
+      color: #9EFFFF;
+    }
+
+    &.selector.css .entity.other.attribute-name.id {
+      color: #FFB454;
+    }
+
+    &.selector.css .entity.other.attribute-name.class {
+      color: #5FE461;
+    }
+
+    &.property-group .support.constant.property-value.css,
+    &.property-value .support.constant.property-value.css {
+      color: #F6F080;
+    }
+
+    &.preprocessor.at-rule .keyword.control.at-rule {
+      color: #F6AA11;
+    }
+
+    &.property-value .support.constant.named-color.css,
+    &.property-value .constant {
+      color: #EDF080;
+    }
+
+    &.constructor.argument.css {
+      color: #EB939A;
+    }
+
+    &.diff,
+    &.diff.header {
+      color: #F8F8F8;
+      background-color: #000E1A;
+    }
+  }
+
+  .source {
+    .gfm {
+      font-weight: normal;
+      -webkit-font-smoothing: auto;
+    }
+
+    .link .entity {
+      color: #3AD900;
+    }
+  }
+
+  .markup {
+    &.deleted {
+      color: #F8F8F8;
+      background-color: #4C0900;
+    }
+
+    &.changed {
+      color: #F8F8F8;
+      background-color: #806F00;
+    }
+
+    &.inserted {
+      color: #F8F8F8;
+      background-color: #154F00;
+    }
+
+    &.raw {
+      background-color: rgba(143, 221, 246, 0.19);
+    }
+
+    &.quote {
+      background-color: #004480;
+    }
+
+    &.list {
+      background-color: #130D26;
+    }
+
+    &.bold {
+      color: #C1AFFF;
+    }
+
+    &.italic {
+      font-style: italic;
+      color: #B8FFD9;
+    }
+
+    &.heading {
+      color: #FFDD00;
+      background-color: #001221;
+    }
+  }
+}
