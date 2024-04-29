@@ -3,8 +3,8 @@ local theme = require("cobalt.colors").setup().theme
 local cobalt = {}
 
 cobalt.normal = {
-  a = { bg = theme.syn.fun, fg = theme.ui.bg_m3 },
-  b = { bg = theme.diff.change, fg = theme.syn.fun },
+  a = { bg = theme.diag.ok, fg = theme.ui.bg },
+  b = { bg = theme.ui.bg_m1, fg = theme.diag.ok },
   c = { bg = theme.ui.bg_p1, fg = theme.ui.fg },
 }
 

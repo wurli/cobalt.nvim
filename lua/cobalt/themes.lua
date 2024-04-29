@@ -1,5 +1,3 @@
-local c = require("cobalt.lib.color")
-
 --TODO:
 --PreProc needs its own color
 --parameter and field should be different
@@ -97,12 +95,12 @@ return {
                 bg_dim     = palette.DeepAzure, -- ?
                 bg_gutter  = palette.MidnightNavy,
 
-                bg_m3      = palette.DeepAzure,  -- Status line, etc
-                bg_m2      = palette.DeepAzure,  -- Status line, etc
-                bg_m1      = palette.DeepAzure,  -- Status line, etc
-                bg         = palette.MarineBlue, -- Normal background
-                bg_p1      = palette.DeepAzure,  -- col indicator line
-                bg_p2      = palette.DeepAzure,  -- col indicator line
+                bg_m3      = palette.DeepAzure,      -- Status line, etc
+                bg_m2      = palette.MidnightNavy,   -- Status line, etc
+                bg_m1      = palette.TangerineBurst, -- Status line, etc
+                bg         = palette.MarineBlue,     -- Normal background
+                bg_p1      = palette.MidnightNavy,   -- col indicator line
+                bg_p2      = palette.DeepAzure,      -- col indicator line
 
                 special    = palette.DeepAzure,
                 nontext    = palette.PolarWhite, -- Line numbers
@@ -130,9 +128,9 @@ return {
                 string     = palette.MintyFresh,
                 variable   = "none",
                 number     = palette.BlushPink,
-                constant   = palette.SnowWhite,
+                constant   = palette.BlushPink,
                 identifier = palette.SnowWhite,   -- E.g. class fields
-                parameter  = palette.AquaBreeze,
+                parameter  = palette.SnowWhite,   -- E.g. function args
                 fun        = palette.SnowWhite,   -- Normal function calls
                 statement  = palette.LemonZest,
                 keyword    = palette.AmberBlaze,  -- Keywords (if, function, while)
@@ -142,9 +140,9 @@ return {
                 regex      = palette.PaleGreen,
                 deprecated = palette.PearlWhite,
                 comment    = palette.SereneSky,
-                punct      = palette.SnowWhite,
-                special1   = palette.AshenGrey,    -- E.g. assert(), require(), table., ---@param
-                special2   = palette.AshenGrey,    -- ??
+                punct      = palette.PaleBlue,
+                special1   = palette.AshenGrey,      -- E.g. assert(), require(), table., ---@param
+                special2   = palette.AshenGrey,      -- ??
                 special3   = palette.PeachSherbet,   -- E.g. return
             },
             vcs = {
@@ -166,24 +164,24 @@ return {
                 hint    = palette.AshenGrey,
             },
             term = {
-                -- palette.sumiInk0, -- black
-                -- palette.autumnRed, -- red
-                -- palette.autumnGreen, -- green
-                -- palette.boatYellow2, -- yellow
-                -- palette.crystalBlue, -- blue
-                -- palette.oniViolet, -- magenta
-                -- palette.waveAqua1, -- cyan
-                -- palette.oldWhite, -- white
-                -- palette.fujiGray, -- bright black
-                -- palette.samuraiRed, -- bright red
-                -- palette.springGreen, -- bright green
-                -- palette.carpYellow, -- bright yellow
-                -- palette.springBlue, -- bright blue
-                -- palette.springViolet1, -- bright magenta
-                -- palette.waveAqua2, -- bright cyan
-                -- palette.fujiWhite, -- bright white
-                -- palette.surimiOrange, -- extended color 1
-                -- palette.peachRed, -- extended color 2
+                palette.Silver1,
+                palette.DeepOrange,
+                palette.BrightYellow,
+                palette.PaleYellow1,
+                palette.PastelBlue1,
+                palette.PastelBlue2,
+                palette.PastelBlue3,
+                palette.OffWhite,
+                palette.Silver2,
+                palette.PalePink,
+                palette.PaleOrange,
+                palette.PaleYellow2,
+                palette.PastelBlue4,
+                palette.PastelBlue5,
+                palette.PastelBlue6,
+                palette.SnowWhite,
+                palette.DeepBlack,
+                palette.ElectricBlue,
             },
         }
     end,

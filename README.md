@@ -7,12 +7,23 @@
 - Extensive support for `TreeSitter` syntax highlighting, and _many_ popular plugins
 - Compilation to lua byte code for super fast startup times
 
-## Installation
+## Installation/usage:
 
-Download with your favorite package manager.
+Download with your favorite package manager:
+
+#### lazy.nvim:
+```lua
+ {
+     "wurli/cobalt.nvim"
+     config = function()
+         vim.cmd[[colorscheme cobalt]]
+     end
+ }
+```
 
 ```lua
 use "wurli/cobalt.nvim"
+vim.cmd[[colorscheme cobalt]]
 ```
 
 ## Requirements
@@ -20,18 +31,6 @@ use "wurli/cobalt.nvim"
 - neovim latest
 - truecolor terminal support
 - undercurl terminal support (optional)
-
-## Usage
-
-As simple as writing (pasting)
-
-```vim
-colorscheme cobalt
-```
-
-```lua
-vim.cmd("colorscheme cobalt")
-```
 
 ## Configuration
 
@@ -52,14 +51,14 @@ require('cobalt').setup({
     terminalColors = true,       -- define vim.g.terminal_color_{0,17}
     colors = {                   -- add/modify theme and palette colors
         palette = {},
-        theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
+        theme = { classic = {}, lotus = {}, dragon = {}, all = {} },
     },
     overrides = function(colors) -- add/modify highlights
         return {}
     end,
-    theme = "wave",              -- Load "wave" theme when 'background' option is not set
+    theme = "classic",              -- Load "wave" theme when 'background' option is not set
     background = {               -- map the value of 'background' option to a theme
-        dark = "wave",           -- try "dragon" !
+        dark = "classic",           -- try "dragon" !
         light = "lotus"
     },
 })
@@ -83,7 +82,7 @@ vim.cmd("colorscheme cobalt")
 
 Cobalt comes in three variants:
 
-- `wave` the default heart-warming theme,
+- `classic` the default heart-warming theme,
 - `dragon` for those late-night sessions
 - `lotus` for when you're out in the open.
 
@@ -95,13 +94,13 @@ Themes can be changed in three ways:
   Use `vim.o.background = ""` to unset this option.
 - Loading the colorscheme directly with:
   ```lua
-  vim.cmd("colorscheme cobalt-wave")
+  vim.cmd("colorscheme cobalt-classic")
   vim.cmd("colorscheme cobalt-dragon")
   vim.cmd("colorscheme cobalt-lotus")
   ```
   or
   ```lua
-  require("cobalt").load("wave")
+  require("cobalt").load("classic")
   ```
 
 ## Customization
@@ -129,7 +128,7 @@ require('cobalt').setup({
         },
         theme = {
             -- change specific usages for a certain theme, or for all of them
-            wave = {
+            classic = {
                 ui = {
                     float = {
                         bg = "none",
@@ -267,7 +266,7 @@ local palette_colors = colors.palette
 local theme_colors = colors.theme
 
 -- Get the colors for a specific theme
-local wave_colors = require("cobalt.colors").setup({ theme = 'wave' })
+local classic_colors = require("cobalt.colors").setup({ theme = 'wave' })
 ```
 
 ### Terminal integration

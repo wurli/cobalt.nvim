@@ -1,30 +1,33 @@
 library(stringr)
 library(dplyr)
+library(tidyverse)
+
+summarise(diamonds, .by = abc)
 
 text <- readr::read_lines("coloration-vn.vim") |>
   stringr::str_subset("^hi")
 
 tibble(
-  text = text |> 
+  text = text |>
     str_remove("hi\\s+"),
   var = str_extract(text, "^\\S+"),
   col = str_extract(text, "#\\S+")
-) |> 
-  filter(!is.na(col)) |> 
+) |>
+  filter(!is.na(col)) |>
   filter(
     !grepl("^(ruby|eruby|html|java|yaml|css)", var)
-  ) |> 
-  mutate(col = toupper(col)) |> 
+  ) |>
+  mutate(col = toupper(col)) |>
   summarise(
-    var = var |> 
-      sort() |> 
-      unique() |> 
+    var = var |>
+      sort() |>
+      unique() |>
       paste(collapse = ","),
     .by = col
-  ) |> 
+  ) |>
   mutate(
     out = glue::glue("{col}: {var}")
-  ) |> 
+  ) |>
   pull(out)
 
 
@@ -45,12 +48,15 @@ combine_colours <- function(...) {
 }
 
 col2rgba <- function(x) unname(c(col2rgb(x)[, 1], 1))
-rgba2col <- function(x) paste0("#", paste(format.hexmode(x[1:3]), collapse = ""))
+rgba2col <- function(x) toupper(paste0("#", paste(format.hexmode(x[1:3]), collapse = "")))
 
 rgba2col(combine_colours(
   col2rgba("#002240"),
   c(179, 101, 57, 0.75)
 ))
+
+rgba2col(c(128, 145, 160, 1))
+"#8091A0"
 
 rgba2col(c(179, 101, 57, 0.75))
 "#b36539"
