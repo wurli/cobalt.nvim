@@ -89,17 +89,17 @@ return {
         return {
             ui = {
                 fg         = palette.SnowWhite,
-                fg_dim     = palette.SnowWhite,
-                fg_reverse = palette.SnowWhite,
+                fg_dim     = palette.AshenGrey,
+                fg_reverse = palette.PolarWhite,
 
                 bg_dim     = palette.DeepAzure, -- ?
                 bg_gutter  = palette.MidnightNavy,
 
                 bg_m3      = palette.DeepAzure,      -- Status line, etc
-                bg_m2      = palette.MidnightNavy,   -- Status line, etc
+                bg_m2      = palette.DarkLavender,   -- Status line, etc
                 bg_m1      = palette.TangerineBurst, -- Status line, etc
                 bg         = palette.MarineBlue,     -- Normal background
-                bg_p1      = palette.MidnightNavy,   -- col indicator line
+                bg_p1      = palette.PolarWhite,     -- col indicator line
                 bg_p2      = palette.DeepAzure,      -- col indicator line
 
                 special    = palette.DeepAzure,
@@ -142,8 +142,8 @@ return {
                 comment    = palette.SereneSky,
                 punct      = palette.PaleBlue,
                 special1   = palette.AshenGrey,      -- E.g. assert(), require(), table., ---@param
-                special2   = palette.AshenGrey,      -- ??
-                special3   = palette.PeachSherbet,   -- E.g. return
+                special2   = palette.MossGreen,      -- ??
+                special3   = palette.PeachSherbet,   -- E.g. some markdown like ``` Lua
             },
             vcs = {
                 added   = palette.AshenGrey,

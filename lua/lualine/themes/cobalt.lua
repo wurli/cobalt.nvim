@@ -5,7 +5,7 @@ local cobalt = {}
 cobalt.normal = {
   a = { bg = theme.diag.ok, fg = theme.ui.bg },
   b = { bg = theme.ui.bg_m1, fg = theme.diag.ok },
-  c = { bg = theme.ui.bg_p1, fg = theme.ui.fg },
+  c = { bg = theme.ui.bg_m2, fg = theme.ui.fg },
 }
 
 cobalt.insert = {

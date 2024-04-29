@@ -1,6 +1,10 @@
 <p align="center">
-  <h2 align="center">🌊 cobalt.nvim 🌊</h2>
+  <h2 align="center">cobalt.nvim</h2>
 </p>
+
+This is a **work in progress** port of the classic blue theme from TextMate. 
+There are many great themes for Neovim out there, but I've not yet found
+one as easy on the eyes as this.
 
 ## Features
 
@@ -56,9 +60,9 @@ require('cobalt').setup({
     overrides = function(colors) -- add/modify highlights
         return {}
     end,
-    theme = "classic",              -- Load "wave" theme when 'background' option is not set
+    theme = "classic",           -- Load "wave" theme when 'background' option is not set
     background = {               -- map the value of 'background' option to a theme
-        dark = "classic",           -- try "dragon" !
+        dark = "classic",        -- try "dragon" !
         light = "lotus"
     },
 })
