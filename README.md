@@ -6,6 +6,8 @@ This is a **work in progress** port of the classic blue theme from TextMate.
 There are many great themes for Neovim out there, but I've not yet found
 one as easy on the eyes as this.
 
+![](preview.md)
+
 ## Features
 
 - Extensive support for `TreeSitter` syntax highlighting, and _many_ popular plugins
