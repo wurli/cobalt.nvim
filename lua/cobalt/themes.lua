@@ -96,7 +96,7 @@ return {
                 bg_gutter  = palette.MidnightNavy,
 
                 bg_m3      = palette.DeepAzure,      -- Status line, etc
-                bg_m2      = palette.DarkLavender,   -- Status line, etc
+                bg_m2      = palette.NightfallBlue,   -- Status line, etc
                 bg_m1      = palette.TangerineBurst, -- Status line, etc
 
                 bg         = palette.MarineBlue,     -- Normal background

@@ -120,22 +120,22 @@ function M.setup(colors, config)
 
         -- Markup {{{
         -- @markup.strong                              ; bold text
-        ["@markup.strong"] = { bold = true },
+        ["@markup.strong"] = { bold = true, fg = theme.syn.number },
         -- @markup.italic                              ; italic text
-        ["@markup.italic"] = { italic = true },
+        ["@markup.italic"] = { italic = true, fg = theme.syn.number },
         -- @markup.strikethrough                       ; strikethrough text
         ["@markup.strikethrough"] = { strikethrough = true },
         -- @markup.underline (Underlined)              ; underlined text
         ["@markup.underline"] = { underline = true },
 
         -- @markup.heading (Title)       ; headings, titles (including markers)
-        ["@markup.heading"] = { link = "Function" },
+        ["@markup.heading"] = { fg = theme.syn.operator, bg = theme.ui.bg_m2 },
 
         --xx @text.literal (Comment)                     ; literal or verbatim text (e.g., inline code)
         -- ["@text.literal"] = { link = "String" },
 
         -- @markup.quote                               ; block quotes
-        ["@markup.quote"] = { link = "@variable.parameter" },
+        ["@markup.quote"] = { fg = theme.syn.string },
         -- @markup.math                                ; math environments (e.g. `$ ... $` in LaTeX)
         ["@markup.math"] = { link = "Constant" },
         -- @markup.environment                         ; environments (e.g. in LaTeX)
@@ -143,15 +143,22 @@ function M.setup(colors, config)
 
         -- @markup.link (Identifier)                   ; text references, footnotes, citations, etc.
         -- @markup.link.label                          ; link, reference descriptions
+        ["@markup.link.label"] = { fg = theme.syn.keyword },
         -- @markup.link.url (Underlined)               ; URL-style links
+        ["@markup.link.url"] = { underline = true },
 
         -- @markup.raw                                 ; literal or verbatim text (e.g. inline code)
+        ["@markup.raw"] = { fg = theme.syn.special3 },
         -- @markup.raw.block                           ; literal or verbatim text as a stand-alone block
         --                                             ; (use priority 90 for blocks with injections)
 
         -- @markup.list                                ; list markers
+        ["@markup.list"] = { fg = theme.syn.operator },
+        -- ["@markup.list.checked"] = { fg = theme.syn.special3 },
         -- @markup.list.checked                        ; checked todo-style list markers
+        ["@markup.list.checked"] = { fg = theme.syn.regex },
         -- @markup.list.unchecked                      ; unchecked todo-style list markers
+        ["@markup.list.unchecked"] = { fg = theme.syn.keyword },
 
         -- @diff.plus                                  ; added text (for diff files)
         ["@diff.plus"] = { fg = theme.vcs.added },
