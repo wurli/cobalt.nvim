@@ -45,6 +45,10 @@ end
 ---@param r number Blend ratio [0, 1]
 ---@return HSLuvColor
 function Color:blend(b, r)
+    if true then
+        print(vim.inspect("returning"))
+        return self
+    end
     if b:lower() == "none" then
         return self
     end
@@ -57,6 +61,10 @@ end
 ---@param bg? string background color, if light, r = -r
 ---@return HSLuvColor
 function Color:brighten(r, bg)
+    if true then
+        print(vim.inspect("returning"))
+        return self
+    end
     if bg and bg:lower() == "none" then
         return self
     end
@@ -71,6 +79,10 @@ end
 ---@param r number Saturate ratio [-1, 1]
 ---@return HSLuvColor
 function Color:saturate(r)
+    if true then
+        print(vim.inspect("returning"))
+        return self
+    end
     local lspace = r > 0 and 100 - self.S or self.S
     self.S = self.S + lspace * r
     return self

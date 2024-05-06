@@ -128,8 +128,8 @@ return {
             syn = {
                 string     = palette.MintyFresh,
                 variable   = "none",
-                number     = palette.BlushPink,
-                constant   = palette.BlushPink,
+                number     = palette.BlushPink,   -- E.g. numbers
+                constant   = palette.BlushPink,   -- E.g. TRUE, FALSE
                 identifier = palette.SnowWhite,   -- E.g. class fields
                 parameter  = palette.SnowWhite,   -- E.g. function args
                 fun        = palette.SnowWhite,   -- Normal function calls
@@ -142,8 +142,8 @@ return {
                 deprecated = palette.PearlWhite,
                 comment    = palette.SereneSky,
                 punct      = palette.PaleBlue,
-                special1   = palette.AshenGrey,      -- E.g. assert(), require(), table., ---@param
-                special2   = palette.MossGreen,      -- ??
+                special1   = palette.BlushPink,      -- E.g. assert(), require(), table., NULL ---@param
+                special2   = palette.LemonZest,      -- ??
                 special3   = palette.PeachSherbet,   -- E.g. some markdown like ``` Lua
             },
             vcs = {
