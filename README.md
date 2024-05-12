@@ -84,80 +84,55 @@ vim.cmd("colorscheme cobalt")
 
 **_NOTE 2:_** Cobalt adjusts to the value of some options. Make sure that the options `'laststatus'` and `'cmdheight'` are set **_before_** calling `setup`.
 
-## Themes
-
-Cobalt comes in three variants:
-
-- `classic` the default heart-warming theme,
-- `dragon` for those late-night sessions
-- `lotus` for when you're out in the open.
-
-Themes can be changed in three ways:
-
-- Setting `config.theme` to the desired theme. Note that `vim.o.background` **must** be unset.
-- Using the `background` option:
-  Any change to the value of `vim.o.background` will select the theme mapped by `config.background`.
-  Use `vim.o.background = ""` to unset this option.
-- Loading the colorscheme directly with:
-  ```lua
-  vim.cmd("colorscheme cobalt-classic")
-  vim.cmd("colorscheme cobalt-dragon")
-  vim.cmd("colorscheme cobalt-lotus")
-  ```
-  or
-  ```lua
-  require("cobalt").load("classic")
-  ```
-
 ## Customization
-
-In cobalt, there are _two_ kinds of colors: `PaletteColors` and `ThemeColors`;
-`PaletteColors` are defined directly as RGB Hex strings, and have arbitrary names
-that recall their actual color. Conversely, `ThemeColors` are named and grouped _semantically_
-on the basis of their actual function.
-
-In short, a `palette` defines all the available colors, while a `theme` maps the `PaletteColors`
-to specific `ThemeColors` and the same palette color may be assigned to multiple theme colors.
-
-You can change _both_ theme or palette colors using `config.colors`.
-All the palette color names can be found [here](lua/cobalt/colors.lua),
-while their usage by each theme can be found [here](lua/cobalt/themes.lua).
-
-```lua
-require('cobalt').setup({
-    ...,
-    colors = {
-        palette = {
-            -- change all usages of these colors
-            sumiInk0 = "#000000",
-            fujiWhite = "#FFFFFF",
-        },
-        theme = {
-            -- change specific usages for a certain theme, or for all of them
-            classic = {
-                ui = {
-                    float = {
-                        bg = "none",
-                    },
-                },
-            },
-            dragon = {
-                syn = {
-                    parameter = "yellow",
-                },
-            },
-            all = {
-                ui = {
-                    bg_gutter = "none"
-                }
-            }
-        }
-    },
-    ...
-})
-```
-
-You can also conveniently add/modify `hlgroups` using the `config.overrides` option.
+<!---->
+<!-- In cobalt, there are _two_ kinds of colors: `PaletteColors` and `ThemeColors`; -->
+<!-- `PaletteColors` are defined directly as RGB Hex strings, and have arbitrary names -->
+<!-- that recall their actual color. Conversely, `ThemeColors` are named and grouped _semantically_ -->
+<!-- on the basis of their actual function. -->
+<!---->
+<!-- In short, a `palette` defines all the available colors, while a `theme` maps the `PaletteColors` -->
+<!-- to specific `ThemeColors` and the same palette color may be assigned to multiple theme colors. -->
+<!---->
+<!-- You can change _both_ theme or palette colors using `config.colors`. -->
+<!-- All the palette color names can be found [here](lua/cobalt/colors.lua), -->
+<!-- while their usage by each theme can be found [here](lua/cobalt/themes.lua). -->
+<!---->
+<!-- ```lua -->
+<!-- require('cobalt').setup({ -->
+<!--     ..., -->
+<!--     colors = { -->
+<!--         palette = { -->
+<!--             -- change all usages of these colors -->
+<!--             sumiInk0 = "#000000", -->
+<!--             fujiWhite = "#FFFFFF", -->
+<!--         }, -->
+<!--         theme = { -->
+<!--             -- change specific usages for a certain theme, or for all of them -->
+<!--             classic = { -->
+<!--                 ui = { -->
+<!--                     float = { -->
+<!--                         bg = "none", -->
+<!--                     }, -->
+<!--                 }, -->
+<!--             }, -->
+<!--             dragon = { -->
+<!--                 syn = { -->
+<!--                     parameter = "yellow", -->
+<!--                 }, -->
+<!--             }, -->
+<!--             all = { -->
+<!--                 ui = { -->
+<!--                     bg_gutter = "none" -->
+<!--                 } -->
+<!--             } -->
+<!--         } -->
+<!--     }, -->
+<!--     ... -->
+<!-- }) -->
+<!-- ``` -->
+<!---->
+You can conveniently add/modify `hlgroups` using the `config.overrides` option.
 Supported keywords are the same for `:h nvim_set_hl` `{val}` parameter.
 
 ```lua
@@ -175,23 +150,6 @@ require('cobalt').setup({
 })
 ```
 
-### Common customizations
-
-#### Remove _gutter_ background
-
-Remove the background of `LineNr`, `{Sign,Fold}Column` and friends
-
-```lua
-colors = {
-    theme = {
-        all = {
-            ui = {
-                bg_gutter = "none"
-            }
-        }
-    }
-}
-```
 
 #### Transparent Floating Windows
 
@@ -294,71 +252,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     end,
 })
 ```
-
-<details>
-<summary><h2>Color palette</h2></summary>
-
-|                                                         | Name          |    Hex    | Usage                                                                             |
-| :-----------------------------------------------------: | :------------ | :-------: | :-------------------------------------------------------------------------------- |
-|   <img src="assets/circles/fujiWhite.svg" width="40">   | fujiWhite     | `#DCD7BA` | Default foreground                                                                |
-|   <img src="assets/circles/oldWhite.svg" width="40">    | oldWhite      | `#C8C093` | Dark foreground (statuslines)                                                     |
-|   <img src="assets/circles/sumiInk0.svg" width="40">    | sumiInk0      | `#16161D` | Dark background (statuslines and floating windows)                                |
-|   <img src="assets/circles/sumiInk1.svg" width="40">    | sumiInk1      | `#1F1F28` | Default background                                                                |
-|   <img src="assets/circles/sumiInk2.svg" width="40">    | sumiInk2      | `#2A2A37` | Lighter background (colorcolumn, folds)                                           |
-|   <img src="assets/circles/sumiInk3.svg" width="40">    | sumiInk3      | `#363646` | Lighter background (cursorline)                                                   |
-|   <img src="assets/circles/sumiInk4.svg" width="40">    | sumiInk4      | `#54546D` | Darker foreground (line numbers, fold column, non-text characters), float borders |
-|   <img src="assets/circles/waveBlue1.svg" width="40">   | waveBlue1     | `#223249` | Popup background, visual selection background                                     |
-|   <img src="assets/circles/waveBlue2.svg" width="40">   | waveBlue2     | `#2D4F67` | Popup selection background, search background                                     |
-|  <img src="assets/circles/winterGreen.svg" width="40">  | winterGreen   | `#2B3328` | Diff Add (background)                                                             |
-| <img src="assets/circles/winterYellow.svg" width="40">  | winterYellow  | `#49443C` | Diff Change (background)                                                          |
-|   <img src="assets/circles/winterRed.svg" width="40">   | winterRed     | `#43242B` | Diff Deleted (background)                                                         |
-|  <img src="assets/circles/winterBlue.svg" width="40">   | winterBlue    | `#252535` | Diff Line (background)                                                            |
-|  <img src="assets/circles/autumnGreen.svg" width="40">  | autumnGreen   | `#76946A` | Git Add                                                                           |
-|   <img src="assets/circles/autumnRed.svg" width="40">   | autumnRed     | `#C34043` | Git Delete                                                                        |
-| <img src="assets/circles/autumnYellow.svg" width="40">  | autumnYellow  | `#DCA561` | Git Change                                                                        |
-|  <img src="assets/circles/samuraiRed.svg" width="40">   | samuraiRed    | `#E82424` | Diagnostic Error                                                                  |
-|  <img src="assets/circles/roninYellow.svg" width="40">  | roninYellow   | `#FF9E3B` | Diagnostic Warning                                                                |
-|   <img src="assets/circles/waveAqua1.svg" width="40">   | waveAqua1     | `#6A9589` | Diagnostic Info                                                                   |
-|  <img src="assets/circles/dragonBlue.svg" width="40">   | dragonBlue    | `#658594` | Diagnostic Hint                                                                   |
-|   <img src="assets/circles/fujiGray.svg" width="40">    | fujiGray      | `#727169` | Comments                                                                          |
-| <img src="assets/circles/springViolet1.svg" width="40"> | springViolet1 | `#938AA9` | Light foreground                                                                  |
-|   <img src="assets/circles/oniViolet.svg" width="40">   | oniViolet     | `#957FB8` | Statements and Keywords                                                           |
-|  <img src="assets/circles/crystalBlue.svg" width="40">  | crystalBlue   | `#7E9CD8` | Functions and Titles                                                              |
-| <img src="assets/circles/springViolet2.svg" width="40"> | springViolet2 | `#9CABCA` | Brackets and punctuation                                                          |
-|  <img src="assets/circles/springBlue.svg" width="40">   | springBlue    | `#7FB4CA` | Specials and builtin functions                                                    |
-|   <img src="assets/circles/lightBlue.svg" width="40">   | lightBlue     | `#A3D4D5` | Not used                                                                          |
-|   <img src="assets/circles/waveAqua2.svg" width="40">   | waveAqua2     | `#7AA89F` | Types                                                                             |
-|  <img src="assets/circles/springGreen.svg" width="40">  | springGreen   | `#98BB6C` | Strings                                                                           |
-|  <img src="assets/circles/boatYellow1.svg" width="40">  | boatYellow1   | `#938056` | Not used                                                                          |
-|  <img src="assets/circles/boatYellow2.svg" width="40">  | boatYellow2   | `#C0A36E` | Operators, RegEx                                                                  |
-|  <img src="assets/circles/carpYellow.svg" width="40">   | carpYellow    | `#E6C384` | Identifiers                                                                       |
-|  <img src="assets/circles/sakuraPink.svg" width="40">   | sakuraPink    | `#D27E99` | Numbers                                                                           |
-|    <img src="assets/circles/waveRed.svg" width="40">    | waveRed       | `#E46876` | Standout specials 1 (builtin variables)                                           |
-|   <img src="assets/circles/peachRed.svg" width="40">    | peachRed      | `#FF5D62` | Standout specials 2 (exception handling, return)                                  |
-| <img src="assets/circles/surimiOrange.svg" width="40">  | surimiOrange  | `#FFA066` | Constants, imports, booleans                                                      |
-|  <img src="assets/circles/katanaGray.svg" width="40">   | katanaGray    | `#717C7C` | Deprecated                                                                        |
-
-</details>
-
-## Extras
-
-- [alacritty](extras/alacritty_cobalt.yml)
-- [Alfred](extra/alfred.md)
-- [base16](extras/base16-theme.yaml)
-- [broot](extras/broot_cobalt.toml)
-- [emacs, doom emacs](extras/cobalt-theme.el)
-- [fish](extras/cobalt.fish)
-- [foot](extras/foot_cobalt.ini)
-- [iTerm](extras/cobalt.itermcolors)
-- [kitty](extras/cobalt.conf)
-- [mintty](extras/cobalt.minttyrc)
-- [pywal](extras/pywal-theme.json)
-- [sway](extras/cobalt.sway)
-- [wezterm](extras/wezterm.lua)
-- [Windows Terminal](extras/windows_terminal.json)
-- [Xresources](extras/.Xresources)
-- [tmTheme (bat, delta and lazygit)](extras/cobalt.tmTheme)
-- [JSON compatible with many terminals](extras/Cobalt.json) Check [Gogh](https://github.com/Gogh-Co/Gogh#-terminals) for the list of supported terminals.
 
 ## Acknowledgements
 
