@@ -96,7 +96,7 @@ return {
                 bg_gutter  = palette.MidnightNavy,
 
                 bg_m3      = palette.DeepAzure,      -- Status line, etc
-                bg_m2      = palette.NightfallBlue,   -- Status line, etc
+                bg_m2      = palette.NightfallBlue,  -- Status line, etc
                 bg_m1      = palette.TangerineBurst, -- Status line, etc
 
                 bg         = palette.MarineBlue,     -- Normal background
@@ -104,7 +104,7 @@ return {
                 bg_p2      = palette.DeepAzure,      -- col indicator line
 
                 special    = palette.DeepAzure,
-                nontext    = palette.PolarWhite,     -- Line numbers
+                nontext    = palette.BlueSteel,     -- Line numbers
                 whitespace = palette.DeepAzure,
 
                 bg_search  = palette.MossGreen,
