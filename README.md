@@ -27,17 +27,6 @@ Download with your favorite package manager:
  }
 ```
 
-```lua
-use "wurli/cobalt.nvim"
-vim.cmd[[colorscheme cobalt]]
-```
-
-## Requirements
-
-- neovim latest
-- truecolor terminal support
-- undercurl terminal support (optional)
-
 ## Configuration
 
 There is no need to call setup if you are ok with the defaults.
@@ -45,26 +34,26 @@ There is no need to call setup if you are ok with the defaults.
 ```lua
 -- Default options:
 require('cobalt').setup({
-    compile = false,             -- enable compiling the colorscheme
-    undercurl = true,            -- enable undercurls
+    compile = false,              -- enable compiling the colorscheme
+    undercurl = true,             -- enable undercurls
     commentStyle = { italic = true },
     functionStyle = {},
     keywordStyle = { italic = true},
     statementStyle = { bold = true },
     typeStyle = {},
-    transparent = false,         -- do not set background color
-    dimInactive = false,         -- dim inactive window `:h hl-NormalNC`
-    terminalColors = true,       -- define vim.g.terminal_color_{0,17}
-    colors = {                   -- add/modify theme and palette colors
+    transparent = false,          -- do not set background color
+    dimInactive = false,          -- dim inactive window `:h hl-NormalNC`
+    terminalColors = true,        -- define vim.g.terminal_color_{0,17}
+    colors = {                    -- add/modify theme and palette colors
         palette = {},
-        theme = { classic = {}, lotus = {}, dragon = {}, all = {} },
+        theme = { default = {} }, -- Default is the only theme for now
     },
-    overrides = function(colors) -- add/modify highlights
+    overrides = function(colors)  -- add/modify highlights
         return {}
     end,
-    theme = "classic",           -- Load "wave" theme when 'background' option is not set
-    background = {               -- map the value of 'background' option to a theme
-        dark = "classic",        -- try "dragon" !
+    theme = "classic",            -- Load "wave" theme when 'background' option is not set
+    background = {                -- map the value of 'background' option to a theme
+        dark = "classic",         -- try "dragon" !
         light = "lotus"
     },
 })
@@ -85,53 +74,43 @@ vim.cmd("colorscheme cobalt")
 **_NOTE 2:_** Cobalt adjusts to the value of some options. Make sure that the options `'laststatus'` and `'cmdheight'` are set **_before_** calling `setup`.
 
 ## Customization
-<!---->
-<!-- In cobalt, there are _two_ kinds of colors: `PaletteColors` and `ThemeColors`; -->
-<!-- `PaletteColors` are defined directly as RGB Hex strings, and have arbitrary names -->
-<!-- that recall their actual color. Conversely, `ThemeColors` are named and grouped _semantically_ -->
-<!-- on the basis of their actual function. -->
-<!---->
-<!-- In short, a `palette` defines all the available colors, while a `theme` maps the `PaletteColors` -->
-<!-- to specific `ThemeColors` and the same palette color may be assigned to multiple theme colors. -->
-<!---->
-<!-- You can change _both_ theme or palette colors using `config.colors`. -->
-<!-- All the palette color names can be found [here](lua/cobalt/colors.lua), -->
-<!-- while their usage by each theme can be found [here](lua/cobalt/themes.lua). -->
-<!---->
-<!-- ```lua -->
-<!-- require('cobalt').setup({ -->
-<!--     ..., -->
-<!--     colors = { -->
-<!--         palette = { -->
-<!--             -- change all usages of these colors -->
-<!--             sumiInk0 = "#000000", -->
-<!--             fujiWhite = "#FFFFFF", -->
-<!--         }, -->
-<!--         theme = { -->
-<!--             -- change specific usages for a certain theme, or for all of them -->
-<!--             classic = { -->
-<!--                 ui = { -->
-<!--                     float = { -->
-<!--                         bg = "none", -->
-<!--                     }, -->
-<!--                 }, -->
-<!--             }, -->
-<!--             dragon = { -->
-<!--                 syn = { -->
-<!--                     parameter = "yellow", -->
-<!--                 }, -->
-<!--             }, -->
-<!--             all = { -->
-<!--                 ui = { -->
-<!--                     bg_gutter = "none" -->
-<!--                 } -->
-<!--             } -->
-<!--         } -->
-<!--     }, -->
-<!--     ... -->
-<!-- }) -->
-<!-- ``` -->
-<!---->
+
+ In cobalt, there are _two_ kinds of colors: `PaletteColors` and `ThemeColors`; 
+ `PaletteColors` are defined directly as RGB Hex strings, and have arbitrary names 
+ that recall their actual color. Conversely, `ThemeColors` are named and grouped _semantically_ 
+ on the basis of their actual function. 
+
+ In short, a `palette` defines all the available colors, while a `theme` maps the `PaletteColors` 
+ to specific `ThemeColors` and the same palette color may be assigned to multiple theme colors. 
+
+ You can change _both_ theme or palette colors using `config.colors`. 
+ All the palette color names can be found [here](lua/cobalt/colors.lua), 
+ while their usage by each theme can be found [here](lua/cobalt/themes.lua). 
+
+ ```lua 
+ require('cobalt').setup({ 
+     ..., 
+     colors = { 
+         palette = { 
+             -- change all usages of these colors 
+             MintyFresh = "#3AD900", -- string
+             SereneSky  = "#0088FF", -- comment
+         }, 
+         theme = { 
+             -- change specific usages for a certain theme, or for all of them 
+             default = { 
+                 ui = { 
+                     float = { 
+                         bg = "none", 
+                     }, 
+                 }, 
+             }, 
+         } 
+     }, 
+     ... 
+ }) 
+ ``` 
+
 You can conveniently add/modify `hlgroups` using the `config.overrides` option.
 Supported keywords are the same for `:h nvim_set_hl` `{val}` parameter.
 
@@ -141,7 +120,7 @@ require('cobalt').setup({
     overrides = function(colors)
         return {
             -- Assign a static color to strings
-            String = { fg = colors.palette.carpYellow, italic = true },
+            String = { fg = colors.palette.PaleBlue, italic = true },
             -- theme colors will update dynamically when you change theme!
             SomePluginHl = { fg = colors.theme.syn.type, bold = true },
         }
@@ -193,12 +172,12 @@ overrides = function(colors)
     local theme = colors.theme
     return {
         TelescopeTitle = { fg = theme.ui.special, bold = true },
-        TelescopePromptNormal = { bg = theme.ui.bg_p1 },
-        TelescopePromptBorder = { fg = theme.ui.bg_p1, bg = theme.ui.bg_p1 },
-        TelescopeResultsNormal = { fg = theme.ui.fg_dim, bg = theme.ui.bg_m1 },
+        TelescopePromptNormal = { bg = theme.ui.bg_m2 },
+        TelescopePromptBorder = { fg = theme.ui.bg_m2, bg = theme.ui.bg_m2 },
+        TelescopeResultsNormal = { fg = theme.ui.fg, bg = theme.ui.bg_m1 },
         TelescopeResultsBorder = { fg = theme.ui.bg_m1, bg = theme.ui.bg_m1 },
-        TelescopePreviewNormal = { bg = theme.ui.bg_dim },
-        TelescopePreviewBorder = { bg = theme.ui.bg_dim, fg = theme.ui.bg_dim },
+        TelescopePreviewNormal = { bg = theme.ui.bg_p2 },
+        TelescopePreviewBorder = { bg = theme.ui.bg_p2, fg = theme.ui.bg_p2 },
     }
 end,
 ```
@@ -217,40 +196,6 @@ overrides = function(colors)
         PmenuThumb = { bg = theme.ui.bg_p2 },
     }
 end,
-```
-
-## Integration
-
-### Get palette and theme colors
-
-```lua
--- Get the colors for the current theme
-local colors = require("cobalt.colors").setup()
-local palette_colors = colors.palette
-local theme_colors = colors.theme
-
--- Get the colors for a specific theme
-local classic_colors = require("cobalt.colors").setup({ theme = 'wave' })
-```
-
-### Terminal integration
-
-The following example provides a snippet to automatically change the theme
-for the Kitty terminal emulator.
-
-```lua
-vim.api.nvim_create_autocmd("ColorScheme", {
-    pattern = "cobalt",
-    callback = function()
-        if vim.o.background == "light" then
-            vim.fn.system("kitty +kitten themes Cobalt_light")
-        elseif vim.o.background == "dark" then
-            vim.fn.system("kitty +kitten themes Cobalt_dragon")
-        else
-            vim.fn.system("kitty +kitten themes Cobalt")
-        end
-    end,
-})
 ```
 
 ## Acknowledgements

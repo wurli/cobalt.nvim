@@ -90,21 +90,21 @@ return {
             ui = {
                 fg         = palette.SnowWhite,
                 fg_dim     = palette.AshenGrey,
-                fg_reverse = palette.AshenGrey,
+                fg_reverse = palette.DarkLavender,
 
-                bg_dim     = palette.BloodRed, -- ?
+                bg_dim     = palette.DeepAzure,      -- ?
                 bg_gutter  = palette.MidnightNavy,
 
-                bg_m3      = palette.DeepAzure,      -- Status line, etc
-                bg_m2      = palette.NightfallBlue,  -- Status line, etc
+                bg_m3      = palette.DarkLavender,   -- Status line, etc
+                bg_m2      = palette.PolarWhite,     -- Status line, etc
                 bg_m1      = palette.TangerineBurst, -- Status line, etc
 
                 bg         = palette.MarineBlue,     -- Normal background
-                bg_p1      = palette.PolarWhite,     -- col indicator line
-                bg_p2      = palette.DeepAzure,      -- col indicator line
+                bg_p1      = palette.PolarWhite,     -- Line length highlight
+                bg_p2      = palette.DeepAzure,      -- Current line highlight
 
-                special    = palette.DeepAzure,
-                nontext    = palette.BlueSteel,     -- Line numbers
+                special    = palette.PeachSherbet,
+                nontext    = palette.BlueSteel,      -- Line numbers
                 whitespace = palette.DeepAzure,
 
                 bg_search  = palette.MossGreen,
