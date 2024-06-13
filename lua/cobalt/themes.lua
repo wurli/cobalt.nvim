@@ -120,9 +120,9 @@ return {
                 },
                 float      = {
                     fg        = palette.SnowWhite,
-                    bg        = palette.MarineBlue,
+                    bg        = palette.DarkGrey,
                     fg_border = palette.SnowWhite,
-                    bg_border = palette.MarineBlue,
+                    bg_border = palette.DarkGrey,
                 },
             },
             syn = {
