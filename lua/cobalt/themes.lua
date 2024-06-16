@@ -152,10 +152,10 @@ return {
                 changed = palette.AshenGrey,
             },
             diff = {
-                add    = palette.AshenGrey,
-                delete = palette.AshenGrey,
-                change = palette.AshenGrey,
-                text   = palette.AshenGrey,
+                add    = palette.PolarWhite,
+                delete = palette.PolarWhite,
+                change = palette.PolarWhite,
+                text   = palette.PolarWhite,         -- Highlights on text hover
             },
             diag = {
                 ok      = palette.AshenGrey,
