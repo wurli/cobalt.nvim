@@ -146,16 +146,16 @@ return {
                 special2   = palette.LemonZest,      -- ??
                 special3   = palette.PeachSherbet,   -- E.g. some markdown like ``` Lua
             },
-            vcs = {
-                added   = palette.AshenGrey,
-                removed = palette.AshenGrey,
-                changed = palette.AshenGrey,
+            vcs = {                                  -- gitsigns text and status line
+                added   = palette.MintyFresh,
+                removed = palette.DeepOrange,
+                changed = palette.DeepOcean,
             },
-            diff = {
+            diff = {                                 -- gitsigns background
                 add    = palette.PolarWhite,
                 delete = palette.PolarWhite,
                 change = palette.PolarWhite,
-                text   = palette.PolarWhite,         -- Highlights on text hover
+                text   = palette.SnowWhite,          -- Highlights on text hover
             },
             diag = {
                 ok      = palette.AshenGrey,
