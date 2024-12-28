@@ -20,7 +20,7 @@ Download with your favorite package manager:
 #### lazy.nvim:
 ```lua
  {
-     "wurli/cobalt.nvim"
+     "wurli/cobalt.nvim",
      config = function()
          vim.cmd[[colorscheme cobalt]]
      end
@@ -54,7 +54,7 @@ require('cobalt').setup({
     theme = "classic",            -- Load "wave" theme when 'background' option is not set
     background = {                -- map the value of 'background' option to a theme
         dark = "classic",         -- try "dragon" !
-        light = "lotus"
+        light = "lotus",
     },
 })
 
