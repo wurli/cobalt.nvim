@@ -107,7 +107,7 @@ return {
                 nontext    = palette.BlueSteel,      -- Line numbers
                 whitespace = palette.DeepAzure,
 
-                bg_search  = palette.MossGreen,
+                bg_search  = palette.TangerineBurst,
                 bg_visual  = palette.RustyBrown,
 
                 pmenu      = {
