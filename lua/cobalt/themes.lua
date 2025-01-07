@@ -155,7 +155,7 @@ return {
                 add    = palette.PolarWhite,
                 delete = palette.PolarWhite,
                 change = palette.PolarWhite,
-                text   = palette.SnowWhite,          -- Highlights on text hover
+                text   = palette.TangerineBurst,          -- Highlights on text hover
             },
             diag = {
                 ok      = palette.AshenGrey,
