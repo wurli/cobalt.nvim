@@ -107,10 +107,10 @@ return {
                 nontext    = palette.BlueSteel,      -- Line numbers
                 whitespace = palette.DeepAzure,
 
-                bg_search  = palette.TangerineBurst,
+                bg_search  = palette.PolarWhite,
                 bg_visual  = palette.RustyBrown,
 
-                pmenu      = {
+                pmenu = {
                     fg       = palette.SnowWhite,
                     fg_sel   = "none",               -- This is important to make highlights pass-through
                     bg       = palette.MidnightNavy,
@@ -118,7 +118,7 @@ return {
                     bg_sbar  = palette.MarineBlue,
                     bg_thumb = palette.MarineBlue,
                 },
-                float      = {
+                float = {
                     fg        = palette.SnowWhite,
                     bg        = palette.DarkGrey,
                     fg_border = palette.SnowWhite,
