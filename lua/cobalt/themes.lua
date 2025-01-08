@@ -100,7 +100,7 @@ return {
                 bg_m1      = palette.TangerineBurst, -- Status line, etc
 
                 bg         = palette.MarineBlue,     -- Normal background
-                bg_p1      = palette.PolarWhite,     -- Line length highlight
+                bg_p1      = palette.MidnightNavy,  -- Line length highlight
                 bg_p2      = palette.DeepAzure,      -- Current line highlight
 
                 special    = palette.PeachSherbet,
