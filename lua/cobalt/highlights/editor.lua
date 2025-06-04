@@ -115,11 +115,11 @@ function M.setup(colors, config)
         -- StatusLineNC	Status lines of not-current windows. Note: If this is equal to "StatusLine", Vim will use "^^^" in the status line of the current window.
         StatusLineNC = { fg = theme.ui.nontext, bg = theme.ui.bg_m3 },
         -- TabLine		Tab pages line, not active tab page label.
-        TabLine = { bg = theme.ui.bg_m3, fg = theme.ui.special },
+        TabLine = { bg = theme.ui.bg_m3, fg = theme.ui.nontext },
         -- TabLineFill	Tab pages line, where there are no labels.
         TabLineFill = { bg = theme.ui.bg },
         -- TabLineSel	Tab pages line, active tab page label.
-        TabLineSel = { fg = theme.ui.fg_dim, bg = theme.ui.bg_p1 },
+        TabLineSel = { bg = theme.ui.bg, fg = theme.ui.special, bold = true },
         -- Title		Titles for output from ":set all", ":autocmd" etc.
         Title = { fg = theme.syn.fun, bold = true },
         -- Visual		Visual mode selection.
