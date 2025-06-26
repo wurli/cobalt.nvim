@@ -135,7 +135,7 @@ function M.setup(colors, config)
         -- ["@text.literal"] = { link = "String" },
 
         -- @markup.quote                               ; block quotes
-        ["@markup.quote"] = { fg = theme.syn.string },
+        ["@markup.quote"] = { fg = theme.syn.preproc, italic = true },
         -- @markup.math                                ; math environments (e.g. `$ ... $` in LaTeX)
         ["@markup.math"] = { link = "Constant" },
         -- @markup.environment                         ; environments (e.g. in LaTeX)
