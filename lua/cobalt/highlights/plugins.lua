@@ -195,6 +195,17 @@ function M.setup(colors, config)
         -- Lazy
         LazyProgressTodo = { fg = theme.ui.nontext },
 
+        -- Snacks-indent
+        SnacksIndent = { fg = theme.ui.whitespace },
+        -- SnacksIndentScope = { fg = theme.ui.special },
+
+        -- Snacks-picker
+        SnacksPicker = { bg = theme.ui.bg },
+        SnacksPickerBorder = { bg = theme.ui.bg },
+        SnacksPickerTitle = { bg = theme.ui.bg, fg = theme.ui.special, bold = true },
+        SnacksPickerListCursorLine = { bg = theme.ui.bg_p2 },
+        SnacksPickerPreviewCursorLine = { bg = theme.ui.bg_p2 },
+
         -- Nvim-Navic
         NavicIconsFile = { link = "Directory" },
         NavicIconsModule = { link = "TSInclude" },
