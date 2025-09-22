@@ -139,7 +139,7 @@ return {
                 preproc    = palette.AshenGrey,
                 type       = palette.AquaBreeze,
                 regex      = palette.PaleGreen,
-                deprecated = palette.PearlWhite,
+                deprecated = palette.BlueSteel,
                 comment    = palette.SereneSky,
                 punct      = palette.PaleBlue,
                 special1   = palette.BlushPink,      -- E.g. assert(), require(), table., NULL ---@param
