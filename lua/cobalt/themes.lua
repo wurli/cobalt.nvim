@@ -95,12 +95,12 @@ return {
                 bg_dim     = palette.DeepAzure,      -- ?
                 bg_gutter  = palette.MidnightNavy,
 
+                bg_m1      = palette.TangerineBurst, -- Status line, etc
                 bg_m3      = palette.DarkLavender,   -- Status line, etc
                 bg_m2      = palette.PolarWhite,     -- Status line, etc
-                bg_m1      = palette.TangerineBurst, -- Status line, etc
 
                 bg         = palette.MarineBlue,     -- Normal background
-                bg_p1      = palette.MidnightNavy,   -- Line length highlight
+                bg_p1      = palette.DarkLavender,   -- Line length highlight
                 bg_p2      = palette.DeepAzure,      -- Current line highlight
 
                 special    = palette.PeachSherbet,
@@ -116,13 +116,13 @@ return {
                     bg       = palette.MidnightNavy,
                     bg_sel   = palette.DeepAzure,
                     bg_sbar  = palette.MarineBlue,
-                    bg_thumb = palette.MarineBlue,
+                    bg_thumb = palette.BlueSteel, -- scrollbar position indicator
                 },
                 float = {
                     fg        = palette.SnowWhite,
-                    bg        = palette.DarkGrey,
-                    fg_border = palette.SnowWhite,
-                    bg_border = palette.DarkGrey,
+                    bg        = palette.DarkLavender,
+                    fg_border = palette.AshenGrey,
+                    bg_border = palette.DarkLavender,
                 },
             },
             syn = {

@@ -20,6 +20,10 @@ function M.setup(colors, config)
         -- vcsSignsDelete = { link = "diffDeleted" },
         -- vcsSignsDeleteLn = { bg = theme.diff.delete },
 
+        BlinkCmpMenuBorder = { link = "floatborder" },
+        BlinkCmpDocBorder = { link = "floatborder" },
+        BlinkCmpSignatureHelpBorder = { link = "floatborder" },
+
         -- copilot.lua
         CopilotAnnotation = { fg = theme.syn.deprecated, italic = true },
         CopilotSuggestion = { fg = theme.syn.deprecated, italic = true },
@@ -38,7 +42,7 @@ function M.setup(colors, config)
         TreesitterContext = { link = "Folded" },
         TreesitterContextLineNumber = { fg = theme.ui.special, bg = theme.ui.bg_gutter },
         -- Telescope
-        TelescopeBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
+        TelescopeBorder = { link = "floatborder" },
         TelescopeTitle = { fg = theme.ui.special },
         TelescopeSelection = { link = 'CursorLine' },
         TelescopeSelectionCaret = { link = 'CursorLineNr' },
@@ -122,7 +126,7 @@ function M.setup(colors, config)
         -- DapUIFrameName = { link = "Normal"},
         DapUISource = { fg = theme.syn.special2 },                                -- guifg=#D484FF"
         DapUILineNumber = { fg = theme.syn.special1 },                            -- guifg=#00f1f5"
-        DapUIFloatBorder = { fg = theme.ui.float.fg_border },                     -- guifg=#00F1F5"
+        DapUIFloatBorder = { link = "floatborder" },                     -- guifg=#00F1F5"
         DapUIWatchesEmpty = { fg = theme.diag.error },                            -- guifg=#F70067"
         DapUIWatchesValue = { fg = theme.syn.identifier },                        -- guifg=#A9FF68"
         DapUIWatchesError = { fg = theme.diag.error },                            --guifg=#F70067"
@@ -141,7 +145,7 @@ function M.setup(colors, config)
         DapUIRestart = { fg = theme.syn.string },                                 --guifg=#A9FF68"
         DapUIUnavailable = { fg = theme.syn.comment },                            --guifg=#424242"
         -- Floaterm
-        FloatermBorder = { fg = theme.ui.float.fg_border, bg = theme.ui.bg },
+        FloatermBorder = { link = "floatborder" },
         -- NeoVim                         = {},
         healthError = { fg = theme.diag.error },
         healthSuccess = { fg = theme.diag.ok },
@@ -151,7 +155,7 @@ function M.setup(colors, config)
         CmpDocumentationBorder = { link = "FloatBorder" },
         CmpCompletion = { link = "Pmenu" },
         CmpCompletionSel = { fg = "NONE", bg = theme.ui.pmenu.bg_sel },
-        CmpCompletionBorder = { fg = theme.ui.bg_search, bg = theme.ui.pmenu.bg },
+        CmpCompletionBorder = { link = "floatborder" },
         CmpCompletionThumb = { link = "PmenuThumb" },
         CmpCompletionSbar = { link = "PmenuSbar" },
         CmpItemAbbr = { fg = theme.ui.pmenu.fg },
@@ -205,7 +209,7 @@ function M.setup(colors, config)
 
         -- Snacks-picker
         SnacksPicker = { bg = theme.ui.bg },
-        SnacksPickerBorder = { bg = theme.ui.bg },
+        SnacksPickerBorder = { link = "floatborder" },
         SnacksPickerTitle = { bg = theme.ui.bg, fg = theme.ui.special, bold = true },
         SnacksPickerListCursorLine = { bg = theme.ui.bg_p2 },
         SnacksPickerPreviewCursorLine = { bg = theme.ui.bg_p2 },
