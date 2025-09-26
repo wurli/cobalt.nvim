@@ -33,7 +33,7 @@ function M.setup(colors, config)
         GitSignsChange = { fg = theme.vcs.changed, bg = theme.ui.bg_gutter },
         GitSignsDelete = { fg = theme.vcs.removed, bg = theme.ui.bg_gutter },
         -- Neogit
-        NeogitDiffContextHighlight = { bg = theme.diff.change }, --[[  guibg=#333333 guifg=#b2b2b2 ]]
+        NeogitDiffContextHighlight = { bg = theme.ui.bg_p1 }, --[[  guibg=#333333 guifg=#b2b2b2 ]]
         NeogitHunkHeader = { fg = theme.syn.fun }, --[[  guifg=#cccccc guibg=#404040 ]]
         NeogitHunkHeaderHighlight = { fg = theme.syn.constant, bg = theme.diff.change }, --[[ guifg=#cccccc guibg=#4d4d4d ]]
         NeogitDiffAddHighlight = { bg = theme.diff.add },
@@ -208,8 +208,12 @@ function M.setup(colors, config)
         -- SnacksIndentScope = { fg = theme.ui.special },
 
         -- Snacks-picker
+        -- Snacks will, by default, dim the window behind the picker. So we
+        -- don't really need to use a darker background, which can also look a
+        -- bit _too_ different when it's showing normal code in the preview
+        -- window
         SnacksPicker = { bg = theme.ui.bg },
-        SnacksPickerBorder = { link = "floatborder" },
+        SnacksPickerBorder = { bg = theme.ui.bg },
         SnacksPickerTitle = { bg = theme.ui.bg, fg = theme.ui.special, bold = true },
         SnacksPickerListCursorLine = { bg = theme.ui.bg_p2 },
         SnacksPickerPreviewCursorLine = { bg = theme.ui.bg_p2 },

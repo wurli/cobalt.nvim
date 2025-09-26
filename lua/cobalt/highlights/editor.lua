@@ -13,7 +13,7 @@ function M.setup(colors, config)
         -- Conceal		Placeholder characters substituted for concealed text (see 'conceallevel').
         Conceal = { fg = theme.ui.special, bold = true },
         -- CurSearch	Used for highlighting a search pattern under the cursor (see 'hlsearch').
-        CurSearch = { fg = theme.ui.fg, bg = theme.ui.bg_search, bold = true },
+        CurSearch = { fg = theme.ui.fg, bg = theme.ui.bg_cursearch, bold = true },
         -- Cursor		Character under the cursor.
         Cursor = { fg = theme.ui.bg, bg = theme.ui.fg },
         -- lCursor		Character under the cursor when |language-mapping| is used (see 'guicursor').
@@ -50,7 +50,7 @@ function M.setup(colors, config)
         -- SignColumn	Column where |signs| are displayed.
         SignColumn = { fg = theme.ui.special, bg = theme.ui.bg_gutter },
         -- IncSearch	'incsearch' highlighting; also used for the text replaced with ":s///c".
-        IncSearch = { fg = theme.ui.fg_reverse, bg = theme.diag.warning },
+        IncSearch = { link = "CurSearch" },
         -- Substitute	|:substitute| replacement text highlighting.
         Substitute = { fg = theme.ui.fg, bg = theme.vcs.removed },
         -- LineNr		Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -143,9 +143,9 @@ function M.setup(colors, config)
         debugPC = { bg = theme.diff.delete },
         debugBreakpoint = { fg = theme.syn.special1, bg = theme.ui.bg_gutter },
 
-        LspReferenceText = { bg = theme.diff.text },
+        LspReferenceText = { bg = theme.ui.whitespace },
         LspReferenceRead = { link = "LspReferenceText" },
-        LspReferenceWrite = { bg = theme.diff.text, underline = true },
+        LspReferenceWrite = { bg = theme.ui.whitespace, underline = true },
         -- LspInlayHint = { link = "NonText"},
 
         DiagnosticError = { fg = theme.diag.error },
