@@ -18,8 +18,8 @@ local palette = {
 
     BlushPink     = "#EB939A", -- support.constant
     PeachSherbet  = "#FFB054", -- support.function
-    Lawn          = "#004d3a", -- Diff add background
-    Burgundy      = "#661d28", -- Diff delte background
+    Lawn          = "#00383c", -- Diff add background
+    Burgundy      = "#3E1F32", -- Diff delte background
     RustyBrown    = "#86543a", -- Visual mode highlight
     Steel         = "#8091A0", -- Line numbers
 
@@ -37,7 +37,7 @@ local palette = {
     MochaBrown    = "#FB6F1C", -- node-selector-bg
     SandyBeige    = "#4D4333", -- comment-highlight
     MossGreen     = "#D1B78A", -- comment-highlight-bg
-    Olive     = "#80803C", -- marker-layer-bg,active-debug-line-bg
+    Olive         = "#80803C", -- marker-layer-bg,active-debug-line-bg
     PaleBlue      = "#BED6FF", -- operator
     CharcoalGrey  = "#C0C0C0", -- terminal
     DarkGrey      = "#1E1E1E", -- terminal
