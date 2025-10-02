@@ -133,7 +133,8 @@ return {
                 constant   = palette.BlushPink,   -- E.g. TRUE, FALSE
                 identifier = palette.SnowWhite,   -- E.g. class fields
                 parameter  = palette.SnowWhite,   -- E.g. function args
-                fun        = palette.SnowWhite,   -- Normal function calls
+                -- fun        = palette.SnowWhite,   -- Normal function calls
+                fun        = palette.LemonZest,   -- Normal function calls
                 statement  = palette.LemonZest,
                 keyword    = palette.AmberBlaze,  -- Keywords (if, function, while)
                 operator   = palette.PaleBlue,
