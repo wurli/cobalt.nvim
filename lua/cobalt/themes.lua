@@ -132,7 +132,7 @@ return {
                 number     = palette.BlushPink,   -- E.g. numbers
                 constant   = palette.BlushPink,   -- E.g. TRUE, FALSE
                 identifier = palette.SnowWhite,   -- E.g. class fields
-                parameter  = palette.SnowWhite,   -- E.g. function args
+                parameter  = palette.PastelBlue6,   -- E.g. function args
                 fun        = palette.LemonZest,   -- Normal function calls
                 statement  = palette.PalePink,
                 keyword    = palette.AmberBlaze,  -- Keywords (if, function, while)
