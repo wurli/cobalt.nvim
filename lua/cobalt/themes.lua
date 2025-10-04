@@ -93,14 +93,15 @@ return {
                 fg_reverse   = palette.DarkLavender,
 
                 bg_dim       = palette.NightShade,
-                bg_gutter    = palette.MidnightNavy,
+                -- bg_gutter    = palette.MidnightNavy,
+                bg_gutter    = palette.MarineBlue,
 
                 bg_m1        = palette.DayShade,     -- Nvim tree window picker
                 bg_m2        = palette.DayShade,     -- Markdown headings
                 bg_m3        = palette.MidnightNavy,   -- Status line of non-current windows
 
                 bg           = palette.MarineBlue,     -- Normal background
-                bg_p1        = palette.DarkLavender,   -- Line length highlight
+                bg_p1        = palette.MidnightNavy,   -- Line length highlight
                 bg_p2        = palette.NightShade,     -- Current line highlight
 
                 special      = palette.PeachSherbet,
