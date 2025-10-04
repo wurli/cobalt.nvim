@@ -18,8 +18,21 @@ local palette = {
 
     BlushPink     = "#EB939A", -- support.constant
     PeachSherbet  = "#FFB054", -- support.function
-    Lawn          = "#00383c", -- Diff add background
-    Burgundy      = "#3E1F32", -- Diff delte background
+
+    -- Lawn          = "#004d3a", -- Old brighter diff colours
+    -- Burgundy      = "#661d28", -- Old brighter diff colours
+
+    -- Lawn          = "#00383c", -- More muted colours
+    -- Burgundy      = "#3E1F32", -- More muted colours
+
+    -- Lawn          = "#00453a", -- Slightly muted colours
+    -- Burgundy      = "#521e2d", -- Slightly muted colours
+
+    -- Lawn          = "#003b45",
+    Lawn          = "#084852",
+    Burgundy      = "#321f33",
+
+
     RustyBrown    = "#86543a", -- Visual mode highlight
     Steel         = "#8091A0", -- Line numbers
 

@@ -92,16 +92,16 @@ return {
                 fg_dim       = palette.AshenGrey,
                 fg_reverse   = palette.DarkLavender,
 
-                bg_dim       = palette.DayShade,      -- ?
+                bg_dim       = palette.NightShade,
                 bg_gutter    = palette.MidnightNavy,
 
-                bg_m1        = palette.NightShade,     -- Nvim tree window picker
-                bg_m2        = palette.NightShade,     -- Markdown headings
+                bg_m1        = palette.DayShade,     -- Nvim tree window picker
+                bg_m2        = palette.DayShade,     -- Markdown headings
                 bg_m3        = palette.MidnightNavy,   -- Status line of non-current windows
 
                 bg           = palette.MarineBlue,     -- Normal background
                 bg_p1        = palette.DarkLavender,   -- Line length highlight
-                bg_p2        = palette.DayShade,       -- Current line highlight
+                bg_p2        = palette.NightShade,     -- Current line highlight
 
                 special      = palette.PeachSherbet,
                 nontext      = palette.Steel,      -- Line numbers
@@ -114,8 +114,8 @@ return {
                 pmenu = {
                     fg       = palette.SnowWhite,
                     fg_sel   = "none",               -- This is important to make highlights pass-through
-                    bg       = palette.MidnightNavy,
-                    bg_sel   = palette.DayShade,
+                    bg       = palette.DarkLavender,
+                    bg_sel   = palette.NightShade,
                     bg_sbar  = palette.MarineBlue,
                     bg_thumb = palette.Steel, -- scrollbar position indicator
                 },
@@ -133,25 +133,25 @@ return {
                 constant   = palette.BlushPink,   -- E.g. TRUE, FALSE
                 identifier = palette.SnowWhite,   -- E.g. class fields
                 parameter  = palette.SnowWhite,   -- E.g. function args
-                -- fun        = palette.SnowWhite,   -- Normal function calls
                 fun        = palette.LemonZest,   -- Normal function calls
-                statement  = palette.LemonZest,
+                statement  = palette.PalePink,
                 keyword    = palette.AmberBlaze,  -- Keywords (if, function, while)
                 operator   = palette.PaleBlue,
                 preproc    = palette.AshenGrey,
                 type       = palette.AquaBreeze,
                 regex      = palette.PaleGreen,
                 deprecated = palette.Steel,
+                directory  = palette.SnowWhite,
                 comment    = palette.SereneSky,
                 punct      = palette.PaleBlue,
                 special1   = palette.BlushPink,      -- E.g. assert(), require(), table., NULL ---@param
                 special2   = palette.LemonZest,      -- ??
-                special3   = palette.PeachSherbet,   -- E.g. some markdown like ``` Lua
+                special3   = palette.PeachSherbet,   -- E.g. 'code' formatting in markdown
             },
             vcs = {                                  -- gitsigns text and status line
                 added   = palette.MossGreen,
                 removed = palette.Salmon,
-                changed = palette.DeepOcean,
+                changed = palette.Steel,
             },
             diff = {                                 -- gitsigns background
                 add    = palette.Lawn,

@@ -25,7 +25,7 @@ function M.setup(colors, config)
         -- CursorLine	Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
         CursorLine = { bg = theme.ui.bg_p2 },
         -- Directory	Directory names (and other special names in listings).
-        Directory = { fg = theme.syn.fun },
+        Directory = { fg = theme.syn.directory },
         -- DiffAdd		Diff mode: Added line. |diff.txt|
         DiffAdd = { bg = theme.diff.add },
         -- DiffChange	Diff mode: Changed line. |diff.txt|
