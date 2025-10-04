@@ -58,7 +58,7 @@ function M.setup(colors, config)
         -- LineNrAbove	Line number for when the 'relativenumber' option is set, above the cursor line.
         -- LineNrBelow	Line number for when the 'relativenumber' option is set, below the cursor line.
         -- CursorLineNr	Like LineNr when 'cursorline' is set and 'cursorlineopt' contains "number" or is "both", for the cursor line.
-        CursorLineNr = { fg = theme.diag.warning, bg = theme.ui.bg_gutter, bold = true },
+        CursorLineNr = { fg = theme.ui.special, bg = theme.ui.bg_gutter, bold = true },
         -- CursorLineFold	Like FoldColumn when 'cursorline' is set for the cursor line.
         -- CursorLineSign	Like SignColumn when 'cursorline' is set for the cursor line.
         -- MatchParen	Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
