@@ -17,6 +17,7 @@
 ---@field regex ColorSpec
 ---@field deprecated ColorSpec
 ---@field comment ColorSpec
+---@field directory ColorSpec
 ---@field punct ColorSpec
 ---@field special1 ColorSpec
 ---@field special2 ColorSpec
