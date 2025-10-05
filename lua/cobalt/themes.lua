@@ -104,7 +104,8 @@ return {
                 bg_p1        = palette.MidnightNavy,   -- Line length highlight
                 bg_p2        = palette.NightShade,     -- Current line highlight
 
-                special      = palette.PeachSherbet,
+                -- special      = palette.PeachSherbet,
+                special      = palette.AmberBlaze,
                 nontext      = palette.Steel,      -- Line numbers
                 whitespace   = palette.DayShade,
 
@@ -134,7 +135,9 @@ return {
                 constant   = palette.BlushPink,   -- E.g. TRUE, FALSE
                 identifier = palette.SnowWhite,   -- E.g. class fields
                 parameter  = palette.PastelBlue6,   -- E.g. function args
-                fun        = palette.LemonZest,   -- Normal function calls
+                -- fun        = palette.PeachSherbet,   -- Normal function calls
+                -- fun        = palette.BrightYellow,   -- Normal function calls
+                fun        = palette.CharcoalGrey,   -- Normal function calls
                 statement  = palette.PalePink,
                 keyword    = palette.AmberBlaze,  -- Keywords (if, function, while)
                 operator   = palette.PaleBlue,
@@ -146,7 +149,7 @@ return {
                 comment    = palette.SereneSky,
                 punct      = palette.PaleBlue,
                 special1   = palette.BlushPink,      -- E.g. assert(), require(), table., NULL ---@param
-                special2   = palette.LemonZest,      -- ??
+                special2   = palette.Custard,      -- ??
                 special3   = palette.PeachSherbet,   -- E.g. 'code' formatting in markdown
             },
             vcs = {                                  -- gitsigns text and status line
@@ -170,7 +173,7 @@ return {
             term = {
                 palette.Silver1,
                 palette.Salmon,
-                palette.BrightYellow,
+                palette.Custard,
                 palette.PaleYellow1,
                 palette.PastelBlue1,
                 palette.PastelBlue2,
