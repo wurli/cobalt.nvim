@@ -2,11 +2,11 @@
   <h2 align="center">cobalt.nvim</h2>
 </p>
 
-This is a **work in progress** port of the classic blue theme from TextMate. 
+This is a **work in progress** port of the classic blue theme from TextMate.
 There are many great themes for Neovim out there, but I've not yet found
 one as easy on the eyes as this.
 
-![](preview.png)
+![cobalt.nvim in action](https://github.com/user-attachments/assets/3422936f-1849-47c5-8136-16f76546f3c0)
 
 ## Features
 
@@ -75,41 +75,41 @@ vim.cmd("colorscheme cobalt")
 
 ## Customization
 
- In cobalt, there are _two_ kinds of colors: `PaletteColors` and `ThemeColors`; 
- `PaletteColors` are defined directly as RGB Hex strings, and have arbitrary names 
- that recall their actual color. Conversely, `ThemeColors` are named and grouped _semantically_ 
- on the basis of their actual function. 
+ In cobalt, there are _two_ kinds of colors: `PaletteColors` and `ThemeColors`;
+ `PaletteColors` are defined directly as RGB Hex strings, and have arbitrary names
+ that recall their actual color. Conversely, `ThemeColors` are named and grouped _semantically_
+ on the basis of their actual function.
 
- In short, a `palette` defines all the available colors, while a `theme` maps the `PaletteColors` 
- to specific `ThemeColors` and the same palette color may be assigned to multiple theme colors. 
+ In short, a `palette` defines all the available colors, while a `theme` maps the `PaletteColors`
+ to specific `ThemeColors` and the same palette color may be assigned to multiple theme colors.
 
- You can change _both_ theme or palette colors using `config.colors`. 
- All the palette color names can be found [here](lua/cobalt/colors.lua), 
- while their usage by each theme can be found [here](lua/cobalt/themes.lua). 
+ You can change _both_ theme or palette colors using `config.colors`.
+ All the palette color names can be found [here](lua/cobalt/colors.lua),
+ while their usage by each theme can be found [here](lua/cobalt/themes.lua).
 
- ```lua 
- require('cobalt').setup({ 
-     ..., 
-     colors = { 
-         palette = { 
-             -- change all usages of these colors 
+ ```lua
+ require('cobalt').setup({
+     ...,
+     colors = {
+         palette = {
+             -- change all usages of these colors
              MintyFresh = "#3AD900", -- string
              SereneSky  = "#0088FF", -- comment
-         }, 
-         theme = { 
-             -- change specific usages for a certain theme, or for all of them 
-             default = { 
-                 ui = { 
-                     float = { 
-                         bg = "none", 
-                     }, 
-                 }, 
-             }, 
-         } 
-     }, 
-     ... 
- }) 
- ``` 
+         },
+         theme = {
+             -- change specific usages for a certain theme, or for all of them
+             default = {
+                 ui = {
+                     float = {
+                         bg = "none",
+                     },
+                 },
+             },
+         }
+     },
+     ...
+ })
+ ```
 
 You can conveniently add/modify `hlgroups` using the `config.overrides` option.
 Supported keywords are the same for `:h nvim_set_hl` `{val}` parameter.
