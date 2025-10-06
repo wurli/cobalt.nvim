@@ -138,7 +138,8 @@ return {
                 parameter  = palette.PastelBlue6,   -- E.g. function args
                 -- fun        = palette.PeachSherbet,   -- Normal function calls
                 -- fun        = palette.BrightYellow,   -- Normal function calls
-                fun        = palette.CharcoalGrey,   -- Normal function calls
+                -- fun        = palette.OrchidPink,   -- Normal function calls
+                fun        = palette.Custard,   -- Normal function calls
                 statement  = palette.PalePink,
                 keyword    = palette.AmberBlaze,  -- Keywords (if, function, while)
                 operator   = palette.PaleBlue,
@@ -150,8 +151,8 @@ return {
                 comment    = palette.SereneSky,
                 punct      = palette.PaleBlue,
                 special1   = palette.BlushPink,      -- E.g. assert(), require(), table., NULL ---@param
-                special2   = palette.Custard,      -- ??
-                special3   = palette.PeachSherbet,   -- E.g. 'code' formatting in markdown
+                special2   = palette.OrchidPink,     -- Builtins, e.g. excepection types
+                special3   = palette.PeachSherbet,   -- E.g. 'code' formatting in markdown, keywords like `return`
             },
             vcs = {                                  -- gitsigns text and status line
                 added   = palette.MossGreen,
