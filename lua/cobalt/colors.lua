@@ -1,64 +1,84 @@
 ---@class PaletteColors
 local palette = {
 
-    -- Names chosen by ChatGPT
-    MidnightNavy   = "#011E3A", -- gutter-bg
-    DeepAzure      = "#204060", -- print-margin
-    MarineBlue     = "#002240", -- bg,box-shadow
-    SnowWhite      = "#FFFFFF", -- text,cursor
-    AmberBlaze     = "#FF9D00", -- meta,span
-    CoralPink      = "#FF628C", -- other
-    PearlWhite     = "#F8F8F8", -- invalid
-    BloodRed       = "#800F00", -- invalid-bg
-    MintyGreen     = "#80FFBB", -- support
-    BlushPink      = "#EB939A", -- support.constant
-    PeachSherbet   = "#FFB054", -- support.function
+    -- UI
+    DarkLavender  = "#001B32", -- markup.list
+    MidnightNavy  = "#011E3A", -- gutter-bg
+    MarineBlue    = "#002240", -- bg,box-shadow
+    DayShade      = "#204060", -- print-margin
+    NightShade    = "#143a5d", -- marker-layer-bg,find-line-bg,console-error-bg
+    -- SnowWhite     = "#FFFFFF", -- text,cursor
+    SnowWhite     = "#F8F6F0", -- text,cursor
+    AmberBlaze    = "#FF9D00", -- meta,span
+    CoralPink     = "#FF628C", -- other
+    -- PearlWhite    = "#F8F6F0", -- invalid
+    Cream    = "#FFFDD0", -- invalid
+    LightCream    = "#FFF8E7", -- invalid
+    Pearl     = "#F8F6F0",
+    BloodRed      = "#800F00", -- invalid-bg
+    -- Copper        = "#bd8041", -- support
+    Copper        = "#A6723A", -- support
 
 
-    LemonZest      = "#FFEE80", -- storage
-    LimeGreen      = "#FFDD00", -- entity
-    MintyFresh     = "#3AD900", -- string
-    PaleGreen      = "#80FFC2", -- regex
-    SereneSky      = "#0088FF", -- comment
-    DeepOcean      = "#C8E4FD", -- heading
-    NightfallBlue  = "#001221", -- heading-bg
-    DarkLavender   = "#001B32", -- markup.list
-    AshenGrey      = "#CCCCCC", -- variable
-    OrchidPink     = "#FF80E1", -- variable.language
-    AquaBreeze     = "#9EFFFF", -- meta.tag
-    TangerineBurst = "#1A3954", -- marker-layer-bg,foreign-line-bg
-    MochaBrown     = "#FB6F1C", -- node-selector-bg
-    SandyBeige     = "#4D4333", -- comment-highlight
-    MossGreen      = "#D1B78A", -- comment-highlight-bg
-    OceanTeal      = "#80803C", -- marker-layer-bg,active-debug-line-bg
-    -- PolarWhite     = "#334F67", -- marker-layer-bg,find-line-bg,console-error-bg
-    PolarWhite     = "#143a5d", -- marker-layer-bg,find-line-bg,console-error-bg
-    PaleBlue       = "#BED6FF", -- operator
-    CharcoalGrey   = "#C0C0C0", -- terminal
-    DarkGrey       = "#1E1E1E", -- terminal
+    BlushPink     = "#EB939A", -- support.constant
+    PeachSherbet  = "#FFB054", -- support.function
+
+    -- Lawn          = "#004d3a", -- Old brighter diff colours
+    -- Burgundy      = "#661d28", -- Old brighter diff colours
+
+    -- Lawn          = "#00383c", -- More muted colours
+    -- Burgundy      = "#3E1F32", -- More muted colours
+
+    -- Lawn          = "#00453a", -- Slightly muted colours
+    -- Burgundy      = "#521e2d", -- Slightly muted colours
+
+    -- Lawn          = "#003b45",
+    Lawn          = "#084852",
+    Burgundy      = "#321f33",
+
+
+    RustyBrown    = "#86543a", -- Visual mode highlight
+    Steel         = "#8091A0", -- Line numbers
+
+    -- Syntax
+    LemonZest     = "#FFEE80", -- storage
+    LimeGreen     = "#FFDD00", -- entity
+    Harlequin     = "#3AD900", -- string
+    PaleGreen     = "#80FFC2", -- regex
+    SereneSky     = "#0088FF", -- comment
+    DeepOcean     = "#C8E4FD", -- heading
+    NightfallBlue = "#001221", -- heading-bg
+    AshenGrey     = "#CCCCCC", -- variable
+    OrchidPink    = "#FF80E1", -- variable.language
+    AquaBreeze    = "#9EFFFF", -- meta.tag
+    MochaBrown    = "#FB6F1C", -- node-selector-bg
+    SandyBeige    = "#4D4333", -- comment-highlight
+    MossGreen     = "#D1B78A", -- comment-highlight-bg
+    Olive         = "#80803C", -- marker-layer-bg,active-debug-line-bg
+    PaleBlue      = "#BED6FF", -- operator
+    CharcoalGrey  = "#C0C0C0", -- terminal
+    DarkGrey      = "#1E1E1E", -- terminal
+
 
     -- Terminal colors
-    Silver1        = "#4F4F4F",
-    DeepOrange     = "#FF6C60",
-    BrightYellow   = "#A8FF60",
-    PaleYellow1    = "#FFFFB6",
-    PastelBlue1    = "#96CBFE",
-    PastelBlue2    = "#FF73FD",
-    PastelBlue3    = "#C6C5FE",
-    OffWhite       = "#EEEEEE",
-    Silver2        = "#7C7C7C",
-    PalePink       = "#FFB6B0",
-    PaleOrange     = "#CEFFAC",
-    PaleYellow2    = "#FFFFCC",
-    PastelBlue4    = "#B5DCFF",
-    PastelBlue5    = "#FF9CFE",
-    PastelBlue6    = "#DFDFFE",
-    DeepBlack      = "#000000",
-    ElectricBlue   = "#00005F",
+    Silver1       = "#4F4F4F",
+    Salmon    = "#FF6C60",
+    Custard  = "#A8FF60",
+    PaleYellow1   = "#FFFFB6",
+    PastelBlue1   = "#96CBFE",
+    PastelBlue2   = "#FF73FD",
+    PastelBlue3   = "#C6C5FE",
+    OffWhite      = "#EEEEEE",
+    Silver2       = "#7C7C7C",
+    PalePink      = "#FFB6B0",
+    PaleOrange    = "#CEFFAC",
+    PaleYellow2   = "#FFFFCC",
+    PastelBlue4   = "#B5DCFF",
+    PastelBlue5   = "#FF9CFE",
+    PastelBlue6   = "#DFDFFE",
+    DeepBlack     = "#000000",
+    ElectricBlue  = "#00005F",
 
-    -- Colors generated by me, by mixing the above based on RStudio theme scss
-    RustyBrown     = "#86543a", -- Visual mode highlight
-    BlueSteel      = "#8091A0", -- Line numbers
 }
 
 local M = {}

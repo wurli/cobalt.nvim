@@ -13,7 +13,7 @@ function M.setup(colors, config)
         -- Conceal		Placeholder characters substituted for concealed text (see 'conceallevel').
         Conceal = { fg = theme.ui.special, bold = true },
         -- CurSearch	Used for highlighting a search pattern under the cursor (see 'hlsearch').
-        CurSearch = { fg = theme.ui.fg, bg = theme.ui.bg_search, bold = true },
+        CurSearch = { fg = theme.ui.fg, bg = theme.ui.bg_cursearch, bold = true },
         -- Cursor		Character under the cursor.
         Cursor = { fg = theme.ui.bg, bg = theme.ui.fg },
         -- lCursor		Character under the cursor when |language-mapping| is used (see 'guicursor').
@@ -25,13 +25,13 @@ function M.setup(colors, config)
         -- CursorLine	Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
         CursorLine = { bg = theme.ui.bg_p2 },
         -- Directory	Directory names (and other special names in listings).
-        Directory = { fg = theme.syn.fun },
+        Directory = { fg = theme.syn.directory },
         -- DiffAdd		Diff mode: Added line. |diff.txt|
         DiffAdd = { bg = theme.diff.add },
         -- DiffChange	Diff mode: Changed line. |diff.txt|
         DiffChange = { bg = theme.diff.change },
         -- DiffDelete	Diff mode: Deleted line. |diff.txt|
-        DiffDelete = { fg = theme.vcs.removed, bg = theme.diff.delete },
+        DiffDelete = { bg = theme.diff.delete },
         -- DiffText	Diff mode: Changed text within a changed line. |diff.txt|
         DiffText = { bg = theme.diff.text },
         -- EndOfBuffer	Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
@@ -50,7 +50,7 @@ function M.setup(colors, config)
         -- SignColumn	Column where |signs| are displayed.
         SignColumn = { fg = theme.ui.special, bg = theme.ui.bg_gutter },
         -- IncSearch	'incsearch' highlighting; also used for the text replaced with ":s///c".
-        IncSearch = { fg = theme.ui.fg_reverse, bg = theme.diag.warning },
+        IncSearch = { link = "CurSearch" },
         -- Substitute	|:substitute| replacement text highlighting.
         Substitute = { fg = theme.ui.fg, bg = theme.vcs.removed },
         -- LineNr		Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
@@ -58,7 +58,7 @@ function M.setup(colors, config)
         -- LineNrAbove	Line number for when the 'relativenumber' option is set, above the cursor line.
         -- LineNrBelow	Line number for when the 'relativenumber' option is set, below the cursor line.
         -- CursorLineNr	Like LineNr when 'cursorline' is set and 'cursorlineopt' contains "number" or is "both", for the cursor line.
-        CursorLineNr = { fg = theme.diag.warning, bg = theme.ui.bg_gutter, bold = true },
+        CursorLineNr = { fg = theme.ui.special, bg = theme.ui.bg_gutter, bold = true },
         -- CursorLineFold	Like FoldColumn when 'cursorline' is set for the cursor line.
         -- CursorLineSign	Like SignColumn when 'cursorline' is set for the cursor line.
         -- MatchParen	Character under the cursor or just before it, if it is a paired bracket, and its match. |pi_paren.txt|
@@ -143,9 +143,9 @@ function M.setup(colors, config)
         debugPC = { bg = theme.diff.delete },
         debugBreakpoint = { fg = theme.syn.special1, bg = theme.ui.bg_gutter },
 
-        LspReferenceText = { bg = theme.diff.text },
+        LspReferenceText = { bg = theme.ui.whitespace },
         LspReferenceRead = { link = "LspReferenceText" },
-        LspReferenceWrite = { bg = theme.diff.text, underline = true },
+        LspReferenceWrite = { bg = theme.ui.whitespace, underline = true },
         -- LspInlayHint = { link = "NonText"},
 
         DiagnosticError = { fg = theme.diag.error },
