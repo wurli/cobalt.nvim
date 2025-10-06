@@ -5,7 +5,7 @@ local cobalt = {}
 cobalt.normal = {
     a = { bg = theme.ui.fg_dim, fg = theme.ui.fg_reverse },
     b = { bg = theme.ui.bg_m1, fg = theme.ui.fg_dim },
-    c = { bg = theme.ui.bg_m2, fg = theme.ui.fg },
+    c = { bg = theme.ui.bg_m1, fg = theme.ui.fg },
 }
 
 cobalt.visual = {

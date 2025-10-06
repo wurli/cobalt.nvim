@@ -5,8 +5,10 @@ local palette = {
     DarkLavender  = "#001B32", -- markup.list
     MidnightNavy  = "#011E3A", -- gutter-bg
     MarineBlue    = "#002240", -- bg,box-shadow
-    DayShade      = "#204060", -- print-margin
+    -- DayShade      = "#204060", -- print-margin
+    DayShade      = "#2f4f6f", -- print-margin
     NightShade    = "#143a5d", -- marker-layer-bg,find-line-bg,console-error-bg
+    Midnight      = "#0d3053",
     SnowWhite     = "#FFFFFF", -- text,cursor
     AmberBlaze    = "#FF9D00", -- meta,span
     CoralPink     = "#FF628C", -- other
@@ -18,26 +20,15 @@ local palette = {
     -- Copper        = "#bd8041", -- support
     Copper        = "#A6723A", -- support
 
-
     BlushPink     = "#EB939A", -- support.constant
     PeachSherbet  = "#FFB054", -- support.function
 
-    -- Lawn          = "#004d3a", -- Old brighter diff colours
-    -- Burgundy      = "#661d28", -- Old brighter diff colours
-
-    -- Lawn          = "#00383c", -- More muted colours
-    -- Burgundy      = "#3E1F32", -- More muted colours
-
-    -- Lawn          = "#00453a", -- Slightly muted colours
-    -- Burgundy      = "#521e2d", -- Slightly muted colours
-
-    -- Lawn          = "#003b45",
     Lawn          = "#084852",
     Burgundy      = "#321f33",
 
-
     RustyBrown    = "#86543a", -- Visual mode highlight
     Steel         = "#8091A0", -- Line numbers
+    BlueSteel     = "#5b7389", -- Line numbers
 
     -- Syntax
     LemonZest     = "#FFEE80", -- storage
