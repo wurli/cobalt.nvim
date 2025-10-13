@@ -35,6 +35,7 @@ vim.cmd[[colorscheme cobalt]]
 ## Testimonials
 > Just wanted to say thanks - it's become my default dark theme that remains amazingly easy to read even
 > in bright spaces. I wish the iterm2 cobalt2 theme was closer to your version!
+
 \- [@kylesnowschwartz](https://github.com/kylesnowschwartz)
 
 ## Acknowledgements
