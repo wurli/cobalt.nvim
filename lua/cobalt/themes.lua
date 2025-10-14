@@ -86,7 +86,7 @@
 return {
     ---@param palette PaletteColors
     ---@return ThemeColors
-    wave = function(palette)
+    cobalt = function(palette)
         return {
             ui = {
                 fg           = palette.SnowWhite,

@@ -17,14 +17,14 @@ M.config = {
     transparent = false,
     dimInactive = false,
     terminalColors = true,
-    colors = { theme = { wave = {}, lotus = {}, dragon = {}, all = {} }, palette = {} },
+    colors = { theme = { cobalt = {} }, palette = {} },
     ---@type fun(colors: CobaltColorsSpec): table<string, table>
     overrides = function()
         return {}
     end,
     ---@type { dark: string, light: string }
-    background = { dark = "wave", light = "lotus" },
-    theme = "wave",
+    background = { dark = "cobalt", light = "cobalt" },
+    theme = "cobalt",
     compile = false,
 }
 
