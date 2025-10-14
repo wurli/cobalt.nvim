@@ -38,6 +38,11 @@ vim.cmd[[colorscheme cobalt]]
 
 \- [@kylesnowschwartz](https://github.com/kylesnowschwartz)
 
+> This is a great theme. Very difficult to find a good, high contrast theme
+> that works day and night.
+
+\- [@lebenna](https://github.com/kylesnowschwartz)
+
 ## Acknowledgements
 
 The implementation of this plugin is based on
