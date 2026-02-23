@@ -32,6 +32,35 @@ Install with your favorite package manager:
 vim.cmd[[colorscheme cobalt]]
 ```
 
+## Configuration
+
+Options can be passed via the `opts` table (lazy.nvim) or by calling `require("cobalt").setup(opts)`:
+
+``` lua
+require("cobalt").setup({
+    -- Use undercurl for spell/diagnostic underlines instead of a straight underline
+    undercurl = true,
+    commentStyle = { italic = true },
+    functionStyle = {},
+    keywordStyle = { italic = false },
+    statementStyle = { bold = true },
+    typeStyle = {},
+    -- Make the editor background transparent, allowing your terminal/compositor
+    -- background to show through
+    transparent = false,
+    -- Dim non-focused windows
+    dimInactive = false,
+    -- Set terminal colors (used by plugins like toggleterm)
+    terminalColors = true,
+    -- Override specific highlight groups. Receives the resolved colors table.
+    overrides = function(colors)
+        return {}
+    end,
+    -- Compile highlights to lua byte code for faster startup
+    compile = false,
+})
+```
+
 ## Testimonials
 > Just wanted to say thanks - it's become my default dark theme that remains amazingly easy to read even
 > in bright spaces. I wish the iterm2 cobalt2 theme was closer to your version!
