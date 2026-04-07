@@ -1,10 +1,11 @@
 local M = {}
 
+-- stylua: ignore
 ---@param colors CobaltColors
 ---@param config? CobaltConfig
 function M.setup(colors, config)
-    config = config or require("cobalt").config
-    local theme = colors.theme
+	config = config or require("cobalt").config
+	local theme = colors.theme
     return {
         -- Neovcs
         -- NeovcsBranch = {},
@@ -23,6 +24,7 @@ function M.setup(colors, config)
         BlinkCmpMenuBorder                = { link = "FloatBorder" },
         BlinkCmpDocBorder                 = { link = "FloatBorder" },
         BlinkCmpSignatureHelpBorder       = { link = "FloatBorder" },
+        BlinkCmpLabelMatch                = { link = "Statement" },
 
         -- copilot.lua
         CopilotAnnotation                 = { fg = theme.syn.deprecated, italic = true },
