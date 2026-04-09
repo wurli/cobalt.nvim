@@ -57,6 +57,7 @@
 ---@field nontext ColorSpec LineNr, NonText
 ---@field whitespace ColorSpec Whitespace
 ---@field bg_search ColorSpec
+---@field bg_cursearch ColorSpec
 ---@field bg_visual ColorSpec
 ---@field pmenu MenuElements
 ---@field float FloatElements
@@ -84,114 +85,114 @@
 ---@field term ColorSpec[]
 
 return {
-    ---@param palette PaletteColors
-    ---@return ThemeColors
-    cobalt = function(palette)
-        return {
-            ui = {
-                fg           = palette.SnowWhite,
-                fg_dim       = palette.AshenGrey,
-                fg_reverse   = palette.DarkLavender,
+	---@param palette PaletteColors
+	---@return ThemeColors
+	cobalt = function(palette)
+		return {
+			ui = {
+				fg = palette.SnowWhite,
+				fg_dim = palette.AshenGrey,
+				fg_reverse = palette.DarkLavender,
 
-                bg_dim       = palette.NightShade,
-                -- bg_gutter    = palette.MidnightNavy,
-                bg_gutter    = palette.MarineBlue,
+				bg_dim = palette.NightShade,
+				-- bg_gutter    = palette.MidnightNavy,
+				bg_gutter = palette.MarineBlue,
 
-                bg_m1        = palette.Midnight,     -- Nvim tree window picker
-                bg_m2        = palette.DayShade,     -- Markdown headings
-                bg_m3        = palette.MidnightNavy,   -- Status line of non-current windows
+				bg_m1 = palette.Midnight, -- Nvim tree window picker
+				bg_m2 = palette.DayShade, -- Markdown headings
+				bg_m3 = palette.MidnightNavy, -- Status line of non-current windows
 
-                bg           = palette.MarineBlue,     -- Normal background
-                bg_p1        = palette.MidnightNavy,   -- Line length highlight
-                bg_p2        = palette.Midnight,     -- Current line highlight
+				bg = palette.MarineBlue, -- Normal background
+				bg_p1 = palette.MidnightNavy, -- Line length highlight
+				bg_p2 = palette.Midnight, -- Current line highlight
 
-                -- special      = palette.PeachSherbet,
-                special      = palette.AmberBlaze,
-                nontext      = palette.Steel,      -- Line numbers
-                whitespace   = palette.DayShade,
+				-- special      = palette.PeachSherbet,
+				special = palette.AmberBlaze,
+				nontext = palette.Steel, -- Line numbers
+				whitespace = palette.DayShade,
 
-                bg_search    = palette.Copper,
-                bg_cursearch = palette.MochaBrown,
-                bg_visual    = palette.RustyBrown,
+				bg_search = palette.Copper,
+				bg_cursearch = palette.MochaBrown,
+				bg_visual = palette.RustyBrown,
 
-                pmenu = {
-                    fg       = palette.SnowWhite,
-                    fg_sel   = "none",               -- This is important to make highlights pass-through
-                    bg       = palette.DarkLavender,
-                    bg_sel   = palette.NightShade,
-                    bg_sbar  = palette.MarineBlue,
-                    bg_thumb = palette.Steel, -- scrollbar position indicator
-                },
-                float = {
-                    fg        = palette.SnowWhite,
-                    bg        = palette.DarkLavender,
-                    fg_border = palette.AshenGrey,
-                    bg_border = palette.DarkLavender,
-                },
-            },
-            syn = {
-                string     = palette.Harlequin,
-                variable   = "none",
-                number     = palette.BlushPink,   -- E.g. numbers
-                constant   = palette.BlushPink,   -- E.g. TRUE, FALSE
-                identifier = palette.SnowWhite,   -- E.g. class fields
-                parameter  = palette.PastelBlue6,   -- E.g. function args
-                -- fun        = palette.PeachSherbet,   -- Normal function calls
-                -- fun        = palette.BrightYellow,   -- Normal function calls
-                -- fun        = palette.OrchidPink,   -- Normal function calls
-                fun        = palette.Custard,   -- Normal function calls
-                statement  = palette.PalePink,
-                keyword    = palette.AmberBlaze,  -- Keywords (if, function, while)
-                operator   = palette.PaleBlue,
-                preproc    = palette.AshenGrey,
-                type       = palette.AquaBreeze,
-                regex      = palette.PaleGreen,
-                deprecated = palette.Steel,
-                directory  = palette.SnowWhite,
-                comment    = palette.SereneSky,
-                punct      = palette.PaleBlue,
-                special1   = palette.BlushPink,      -- E.g. assert(), require(), table., NULL ---@param
-                special2   = palette.OrchidPink,     -- Builtins, e.g. excepection types
-                special3   = palette.PeachSherbet,   -- E.g. 'code' formatting in markdown, keywords like `return`
-            },
-            vcs = {                                  -- gitsigns text and status line
-                added   = palette.MossGreen,
-                removed = palette.Salmon,
-                changed = palette.Steel,
-            },
-            diff = {                                 -- gitsigns background
-                add    = palette.Lawn,
-                delete = palette.Burgundy,
-                change = palette.NightShade,
-                text   = palette.DayShade,
-            },
-            diag = {
-                ok      = palette.Steel,
-                error   = palette.Steel,
-                warning = palette.Steel,
-                info    = palette.Steel,
-                hint    = palette.Steel,
-            },
-            term = {
-                palette.Silver1,
-                palette.Salmon,
-                palette.Custard,
-                palette.PaleYellow1,
-                palette.PastelBlue1,
-                palette.PastelBlue2,
-                palette.PastelBlue3,
-                palette.OffWhite,
-                palette.Silver2,
-                palette.PalePink,
-                palette.PaleOrange,
-                palette.PaleYellow2,
-                palette.PastelBlue4,
-                palette.PastelBlue5,
-                palette.PastelBlue6,
-                palette.SnowWhite,
-                palette.DeepBlack,
-                palette.ElectricBlue,
-            },
-        }
-    end,
+				pmenu = {
+					fg = palette.SnowWhite,
+					fg_sel = "none", -- This is important to make highlights pass-through
+					bg = palette.DarkLavender,
+					bg_sel = palette.NightShade,
+					bg_sbar = palette.MarineBlue,
+					bg_thumb = palette.Steel, -- scrollbar position indicator
+				},
+				float = {
+					fg = palette.SnowWhite,
+					bg = palette.DarkLavender,
+					fg_border = palette.AshenGrey,
+					bg_border = palette.DarkLavender,
+				},
+			},
+			syn = {
+				string = palette.Harlequin,
+				variable = "none",
+				number = palette.BlushPink, -- E.g. numbers
+				constant = palette.BlushPink, -- E.g. TRUE, FALSE
+				identifier = palette.SnowWhite, -- E.g. class fields
+				parameter = palette.PastelBlue6, -- E.g. function args
+				-- fun        = palette.PeachSherbet,   -- Normal function calls
+				-- fun        = palette.BrightYellow,   -- Normal function calls
+				-- fun        = palette.OrchidPink,   -- Normal function calls
+				fun = palette.Custard, -- Normal function calls
+				statement = palette.PalePink,
+				keyword = palette.AmberBlaze, -- Keywords (if, function, while)
+				operator = palette.PaleBlue,
+				preproc = palette.AshenGrey,
+				type = palette.AquaBreeze,
+				regex = palette.PaleGreen,
+				deprecated = palette.Steel,
+				directory = palette.SnowWhite,
+				comment = palette.SereneSky,
+				punct = palette.PaleBlue,
+				special1 = palette.BlushPink, -- E.g. assert(), require(), table., NULL ---@param
+				special2 = palette.OrchidPink, -- Builtins, e.g. excepection types
+				special3 = palette.PeachSherbet, -- E.g. 'code' formatting in markdown, keywords like `return`
+			},
+			vcs = { -- gitsigns text and status line
+				added = palette.MossGreen,
+				removed = palette.Salmon,
+				changed = palette.Steel,
+			},
+			diff = { -- gitsigns background
+				add = palette.Lawn,
+				delete = palette.Burgundy,
+				change = palette.NightShade,
+				text = palette.DayShade,
+			},
+			diag = {
+				ok = palette.Steel,
+				error = palette.Steel,
+				warning = palette.Steel,
+				info = palette.Steel,
+				hint = palette.Steel,
+			},
+			term = {
+				palette.Silver1,
+				palette.Salmon,
+				palette.Custard,
+				palette.PaleYellow1,
+				palette.PastelBlue1,
+				palette.PastelBlue2,
+				palette.PastelBlue3,
+				palette.OffWhite,
+				palette.Silver2,
+				palette.PalePink,
+				palette.PaleOrange,
+				palette.PaleYellow2,
+				palette.PastelBlue4,
+				palette.PastelBlue5,
+				palette.PastelBlue6,
+				palette.SnowWhite,
+				palette.DeepBlack,
+				palette.ElectricBlue,
+			},
+		}
+	end,
 }
