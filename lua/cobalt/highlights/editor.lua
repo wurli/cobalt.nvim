@@ -160,10 +160,10 @@ function M.setup(colors, config)
 		DiagnosticFloatingHint = { fg = theme.diag.hint },
 		DiagnosticFloatingOk = { fg = theme.diag.ok },
 
-		DiagnosticSignError = { fg = theme.diag.error, bg = theme.ui.bg_gutter },
-		DiagnosticSignWarn = { fg = theme.diag.warning, bg = theme.ui.bg_gutter },
-		DiagnosticSignInfo = { fg = theme.diag.info, bg = theme.ui.bg_gutter },
-		DiagnosticSignHint = { fg = theme.diag.hint, bg = theme.ui.bg_gutter },
+		DiagnosticSignError = { fg = theme.diag.error },
+		DiagnosticSignWarn = { fg = theme.diag.warning },
+		DiagnosticSignInfo = { fg = theme.diag.info },
+		DiagnosticSignHint = { fg = theme.diag.hint },
 
 		DiagnosticVirtualTextError = { link = "DiagnosticError" },
 		DiagnosticVirtualTextWarn = { link = "DiagnosticWarn" },
