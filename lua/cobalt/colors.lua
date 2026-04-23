@@ -1,3 +1,4 @@
+-- stylua: ignore start
 ---@class PaletteColors
 local palette = {
 
@@ -68,8 +69,8 @@ local palette = {
     PastelBlue6   = "#DFDFFE",
     DeepBlack     = "#000000",
     ElectricBlue  = "#00005F",
-
 }
+-- stylue: ignore end
 
 local M = {}
 --- Generate colors table:
