@@ -148,7 +148,7 @@ return {
 				type = palette.AquaBreeze,
 				regex = palette.PaleGreen,
 				deprecated = palette.Steel,
-				directory = palette.SnowWhite,
+				directory = palette.Steel,
 				comment = palette.SereneSky,
 				punct = palette.PaleBlue,
 				special1 = palette.BlushPink, -- E.g. assert(), require(), table., NULL ---@param
