@@ -167,9 +167,9 @@ return {
 				text = palette.DayShade,
 			},
 			diag = {
-				ok = palette.Steel,
-				error = palette.Steel,
-				warning = palette.Steel,
+				ok = palette.MossGreen,
+				error = palette.MochaBrown,
+				warning = palette.Salmon,
 				info = palette.Steel,
 				hint = palette.Steel,
 			},
